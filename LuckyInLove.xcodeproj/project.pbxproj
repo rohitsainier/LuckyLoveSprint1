@@ -21,6 +21,12 @@
 		223AA600235255B500642FB4 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223AA5FF235255B500642FB4 /* APIManager.swift */; };
 		223AA6022352560E00642FB4 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223AA6012352560E00642FB4 /* AppModel.swift */; };
 		223AA6042352568000642FB4 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223AA6032352568000642FB4 /* Utility.swift */; };
+		223AA60723525B4C00642FB4 /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223AA60523525B4C00642FB4 /* ProfileHeaderCell.swift */; };
+		223AA60823525B4C00642FB4 /* ProfileHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223AA60623525B4C00642FB4 /* ProfileHeaderCell.xib */; };
+		223AA60B2352675700642FB4 /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223AA6092352675700642FB4 /* GridCell.swift */; };
+		223AA60C2352675700642FB4 /* GridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223AA60A2352675700642FB4 /* GridCell.xib */; };
+		223AA60F2352684E00642FB4 /* ProfileFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223AA60D2352684E00642FB4 /* ProfileFooterCell.swift */; };
+		223AA6102352684E00642FB4 /* ProfileFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223AA60E2352684E00642FB4 /* ProfileFooterCell.xib */; };
 		22B63686234E6D05001AB5FB /* SwipeCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B63685234E6D05001AB5FB /* SwipeCardView.xib */; };
 		22B63688234E6DB9001AB5FB /* SwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B63687234E6DB9001AB5FB /* SwipeCardView.swift */; };
 		2F13EB0C2349B3E4004EC435 /* MatchesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13EB0B2349B3E4004EC435 /* MatchesVC.swift */; };
@@ -65,6 +71,12 @@
 		223AA5FF235255B500642FB4 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		223AA6012352560E00642FB4 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		223AA6032352568000642FB4 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		223AA60523525B4C00642FB4 /* ProfileHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCell.swift; sourceTree = "<group>"; };
+		223AA60623525B4C00642FB4 /* ProfileHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderCell.xib; sourceTree = "<group>"; };
+		223AA6092352675700642FB4 /* GridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
+		223AA60A2352675700642FB4 /* GridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridCell.xib; sourceTree = "<group>"; };
+		223AA60D2352684E00642FB4 /* ProfileFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFooterCell.swift; sourceTree = "<group>"; };
+		223AA60E2352684E00642FB4 /* ProfileFooterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileFooterCell.xib; sourceTree = "<group>"; };
 		22B63685234E6D05001AB5FB /* SwipeCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeCardView.xib; sourceTree = "<group>"; };
 		22B63687234E6DB9001AB5FB /* SwipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardView.swift; sourceTree = "<group>"; };
 		2E3669C55EF6CA81D69AD42F /* Pods_LuckyInLove.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuckyInLove.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				2F13EB0F2349B477004EC435 /* MatchesCell */,
+				223AA6092352675700642FB4 /* GridCell.swift */,
+				223AA60A2352675700642FB4 /* GridCell.xib */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
@@ -177,6 +191,10 @@
 			children = (
 				2F13EB182349C689004EC435 /* ChatListingCell.swift */,
 				2F13EB192349C689004EC435 /* ChatListingCell.xib */,
+				223AA60523525B4C00642FB4 /* ProfileHeaderCell.swift */,
+				223AA60623525B4C00642FB4 /* ProfileHeaderCell.xib */,
+				223AA60D2352684E00642FB4 /* ProfileFooterCell.swift */,
+				223AA60E2352684E00642FB4 /* ProfileFooterCell.xib */,
 			);
 			path = TableviewCell;
 			sourceTree = "<group>";
@@ -413,6 +431,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223AA60C2352675700642FB4 /* GridCell.xib in Resources */,
 				2F7FBE5D2348D8B600659F1A /* logoApp.png in Resources */,
 				220BF34B234E4E210021BFAF /* Chat.storyboard in Resources */,
 				2FFE2C1E234A167A00170668 /* profileImage.jpeg in Resources */,
@@ -425,10 +444,12 @@
 				2F13EB152349B82B004EC435 /* 5.jpg in Resources */,
 				2219AA7E234FA37A00145EAB /* SirichanaBold.ttf in Resources */,
 				2F7FBE492348CA7900659F1A /* Main.storyboard in Resources */,
+				223AA60823525B4C00642FB4 /* ProfileHeaderCell.xib in Resources */,
 				2219AA81234FAF1500145EAB /* GoogleService-Info.plist in Resources */,
 				2F13EB1B2349C689004EC435 /* ChatListingCell.xib in Resources */,
 				2F13EB132349B48F004EC435 /* MatchesCell.xib in Resources */,
 				220BF352234E537E0021BFAF /* CustomTabBarView.xib in Resources */,
+				223AA6102352684E00642FB4 /* ProfileFooterCell.xib in Resources */,
 				22B63686234E6D05001AB5FB /* SwipeCardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +513,7 @@
 				223AA6022352560E00642FB4 /* AppModel.swift in Sources */,
 				2F7FBE6823490CBA00659F1A /* SignupVC.swift in Sources */,
 				220BF354234E537E0021BFAF /* CustomTabBarController.swift in Sources */,
+				223AA60723525B4C00642FB4 /* ProfileHeaderCell.swift in Sources */,
 				22B63688234E6DB9001AB5FB /* SwipeCardView.swift in Sources */,
 				2F7FBE5F2348DBF300659F1A /* Utilities.swift in Sources */,
 				2F7FBE462348CA7900659F1A /* LoginVC.swift in Sources */,
@@ -500,10 +522,12 @@
 				2F3654ED2349E97E00CFE90E /* View+Addition.swift in Sources */,
 				2F7FBE442348CA7900659F1A /* AppDelegate.swift in Sources */,
 				2F7FBE65234908DC00659F1A /* Constants.swift in Sources */,
+				223AA60F2352684E00642FB4 /* ProfileFooterCell.swift in Sources */,
 				2FFE2C1C2349F6BE00170668 /* ProfileVC.swift in Sources */,
 				2F13EB172349C46E004EC435 /* ChatListingVC.swift in Sources */,
 				2F7FBE702349152E00659F1A /* Font+Addition.swift in Sources */,
 				2F7FBE6D234914DE00659F1A /* BaseView.swift in Sources */,
+				223AA60B2352675700642FB4 /* GridCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
