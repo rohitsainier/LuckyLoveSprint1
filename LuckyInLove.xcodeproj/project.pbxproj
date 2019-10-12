@@ -16,6 +16,12 @@
 		220BF354234E537E0021BFAF /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220BF351234E537E0021BFAF /* CustomTabBarController.swift */; };
 		2219AA7E234FA37A00145EAB /* SirichanaBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2219AA7C234FA37A00145EAB /* SirichanaBold.ttf */; };
 		2219AA7F234FA37A00145EAB /* SirichanaRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2219AA7D234FA37A00145EAB /* SirichanaRegular.ttf */; };
+		2219AA81234FAF1500145EAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2219AA80234FAF1500145EAB /* GoogleService-Info.plist */; };
+		2220B94A2350E8910090D6C0 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220B9452350E8910090D6C0 /* APIHelper.swift */; };
+		2220B94B2350E8910090D6C0 /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220B9462350E8910090D6C0 /* GlobalConstant.swift */; };
+		2220B94C2350E8910090D6C0 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220B9472350E8910090D6C0 /* AppModel.swift */; };
+		2220B94D2350E8920090D6C0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220B9482350E8910090D6C0 /* APIManager.swift */; };
+		2220B94E2350E8920090D6C0 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220B9492350E8910090D6C0 /* Utility.swift */; };
 		22B63686234E6D05001AB5FB /* SwipeCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B63685234E6D05001AB5FB /* SwipeCardView.xib */; };
 		22B63688234E6DB9001AB5FB /* SwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B63687234E6DB9001AB5FB /* SwipeCardView.swift */; };
 		2F13EB0C2349B3E4004EC435 /* MatchesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13EB0B2349B3E4004EC435 /* MatchesVC.swift */; };
@@ -33,7 +39,6 @@
 		2F7FBE4E2348CA7B00659F1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7FBE4C2348CA7B00659F1A /* LaunchScreen.storyboard */; };
 		2F7FBE5D2348D8B600659F1A /* logoApp.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7FBE5C2348D8B600659F1A /* logoApp.png */; };
 		2F7FBE5F2348DBF300659F1A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FBE5E2348DBF300659F1A /* Utilities.swift */; };
-		2F7FBE612348DC7400659F1A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FBE602348DC7400659F1A /* APIManager.swift */; };
 		2F7FBE632349080A00659F1A /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FBE622349080A00659F1A /* DataModel.swift */; };
 		2F7FBE65234908DC00659F1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FBE64234908DB00659F1A /* Constants.swift */; };
 		2F7FBE6823490CBA00659F1A /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FBE6723490CBA00659F1A /* SignupVC.swift */; };
@@ -56,6 +61,12 @@
 		220BF351234E537E0021BFAF /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		2219AA7C234FA37A00145EAB /* SirichanaBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SirichanaBold.ttf; sourceTree = "<group>"; };
 		2219AA7D234FA37A00145EAB /* SirichanaRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SirichanaRegular.ttf; sourceTree = "<group>"; };
+		2219AA80234FAF1500145EAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2220B9452350E8910090D6C0 /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		2220B9462350E8910090D6C0 /* GlobalConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
+		2220B9472350E8910090D6C0 /* AppModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		2220B9482350E8910090D6C0 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		2220B9492350E8910090D6C0 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		22B63685234E6D05001AB5FB /* SwipeCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeCardView.xib; sourceTree = "<group>"; };
 		22B63687234E6DB9001AB5FB /* SwipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardView.swift; sourceTree = "<group>"; };
 		2E3669C55EF6CA81D69AD42F /* Pods_LuckyInLove.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuckyInLove.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +87,6 @@
 		2F7FBE4F2348CA7B00659F1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F7FBE5C2348D8B600659F1A /* logoApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoApp.png; sourceTree = "<group>"; };
 		2F7FBE5E2348DBF300659F1A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		2F7FBE602348DC7400659F1A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		2F7FBE622349080A00659F1A /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		2F7FBE64234908DB00659F1A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2F7FBE6723490CBA00659F1A /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
@@ -118,6 +128,19 @@
 				2219AA7D234FA37A00145EAB /* SirichanaRegular.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		2220B9442350E8910090D6C0 /* ProjectHelper */ = {
+			isa = PBXGroup;
+			children = (
+				2220B9452350E8910090D6C0 /* APIHelper.swift */,
+				2220B9462350E8910090D6C0 /* GlobalConstant.swift */,
+				2220B9472350E8910090D6C0 /* AppModel.swift */,
+				2220B9482350E8910090D6C0 /* APIManager.swift */,
+				2220B9492350E8910090D6C0 /* Utility.swift */,
+			);
+			name = ProjectHelper;
+			path = "../../../../../Documents/App-Knit/ADEQ/ADEQ/ProjectHelper";
 			sourceTree = "<group>";
 		};
 		22B63684234E6C90001AB5FB /* SwipeView */ = {
@@ -192,6 +215,7 @@
 		2F7FBE422348CA7900659F1A /* LuckyInLove */ = {
 			isa = PBXGroup;
 			children = (
+				2220B9442350E8910090D6C0 /* ProjectHelper */,
 				2219AA7B234FA35700145EAB /* Font */,
 				2F7FBE432348CA7900659F1A /* AppDelegate.swift */,
 				2F7FBE6E2349151D00659F1A /* Extensions */,
@@ -204,6 +228,7 @@
 				2F7FBE5A2348D85900659F1A /* StoryBoards */,
 				2F7FBE4A2348CA7B00659F1A /* Assets.xcassets */,
 				2F7FBE4C2348CA7B00659F1A /* LaunchScreen.storyboard */,
+				2219AA80234FAF1500145EAB /* GoogleService-Info.plist */,
 				2F7FBE4F2348CA7B00659F1A /* Info.plist */,
 			);
 			path = LuckyInLove;
@@ -243,7 +268,6 @@
 			isa = PBXGroup;
 			children = (
 				2F7FBE5E2348DBF300659F1A /* Utilities.swift */,
-				2F7FBE602348DC7400659F1A /* APIManager.swift */,
 				2F7FBE64234908DB00659F1A /* Constants.swift */,
 				2F7FBE622349080A00659F1A /* DataModel.swift */,
 			);
@@ -405,6 +429,7 @@
 				2F13EB152349B82B004EC435 /* 5.jpg in Resources */,
 				2219AA7E234FA37A00145EAB /* SirichanaBold.ttf in Resources */,
 				2F7FBE492348CA7900659F1A /* Main.storyboard in Resources */,
+				2219AA81234FAF1500145EAB /* GoogleService-Info.plist in Resources */,
 				2F13EB1B2349C689004EC435 /* ChatListingCell.xib in Resources */,
 				2F13EB132349B48F004EC435 /* MatchesCell.xib in Resources */,
 				220BF352234E537E0021BFAF /* CustomTabBarView.xib in Resources */,
@@ -468,16 +493,20 @@
 				220BF353234E537E0021BFAF /* CustomTabBarView.swift in Sources */,
 				2F7FBE632349080A00659F1A /* DataModel.swift in Sources */,
 				2F7FBE6823490CBA00659F1A /* SignupVC.swift in Sources */,
-				2F7FBE612348DC7400659F1A /* APIManager.swift in Sources */,
+				2220B94A2350E8910090D6C0 /* APIHelper.swift in Sources */,
+				2220B94B2350E8910090D6C0 /* GlobalConstant.swift in Sources */,
 				220BF354234E537E0021BFAF /* CustomTabBarController.swift in Sources */,
 				22B63688234E6DB9001AB5FB /* SwipeCardView.swift in Sources */,
 				2F7FBE5F2348DBF300659F1A /* Utilities.swift in Sources */,
+				2220B94C2350E8910090D6C0 /* AppModel.swift in Sources */,
 				2F7FBE462348CA7900659F1A /* LoginVC.swift in Sources */,
 				2F3654ED2349E97E00CFE90E /* View+Addition.swift in Sources */,
 				2F7FBE442348CA7900659F1A /* AppDelegate.swift in Sources */,
 				2F7FBE65234908DC00659F1A /* Constants.swift in Sources */,
 				2FFE2C1C2349F6BE00170668 /* ProfileVC.swift in Sources */,
 				2F13EB172349C46E004EC435 /* ChatListingVC.swift in Sources */,
+				2220B94E2350E8920090D6C0 /* Utility.swift in Sources */,
+				2220B94D2350E8920090D6C0 /* APIManager.swift in Sources */,
 				2F7FBE702349152E00659F1A /* Font+Addition.swift in Sources */,
 				2F7FBE6D234914DE00659F1A /* BaseView.swift in Sources */,
 			);
@@ -635,7 +664,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.Lucky;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luckynlove.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LuckyInLove/Resources/LuckyInLove-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -658,7 +687,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.Lucky;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luckynlove.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LuckyInLove/Resources/LuckyInLove-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

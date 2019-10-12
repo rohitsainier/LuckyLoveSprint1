@@ -20,5 +20,7 @@ target 'LuckyInLove' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'Firebase/Messaging'
+  pod 'NVActivityIndicatorView'
+  pod 'Toaster'
 
 end

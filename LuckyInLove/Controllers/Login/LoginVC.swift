@@ -58,13 +58,30 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegat
     //MARK:- Button Action
     
     @IBAction func LoginButtonAction(_ sender: Any) {
-        AppDelegate().sharedDelegate().navigateToDashboard()
+        guard let username = txtEmail.text else{return}
+        guard let password = txtPassword.text else{return}
+        if username == ""{
+            displayToast("Please enter your username")
+        }
+        else if password == ""{
+            displayToast("Please enter your password")
+        }
+        else{
+            let params: [String: Any] = ["email": username,"Password": password]
+            GCD.USER.LOGIN.async {
+                APIManager.sharedInstance.I_AM_COOL(params: params, api: API.USER.Login, Loader: true, isMultipart: false) { (responseData) in
+                    print(responseData)
+                AppDelegate().sharedDelegate().navigateToDashboard()
+                }
+            }
+            
+        }
+        
     }
     
     @IBAction func SignupButtonAction(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: StroyBoardIdentifire.kMain, bundle: nil)
-        let signUpVC = storyBoard.instantiateViewController(withIdentifier: ControllerIdentifire.kSignupVC) as! SignupVC
-        self.navigationController?.pushViewController(signUpVC, animated: true)
+        let vc: SignupVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func ForgotPasswordButtonAction(_ sender: Any) {
