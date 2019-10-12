@@ -17,11 +17,10 @@
 		2219AA7E234FA37A00145EAB /* SirichanaBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2219AA7C234FA37A00145EAB /* SirichanaBold.ttf */; };
 		2219AA7F234FA37A00145EAB /* SirichanaRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2219AA7D234FA37A00145EAB /* SirichanaRegular.ttf */; };
 		2219AA81234FAF1500145EAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2219AA80234FAF1500145EAB /* GoogleService-Info.plist */; };
-		2220B94A2350E8910090D6C0 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220B9452350E8910090D6C0 /* APIHelper.swift */; };
-		2220B94B2350E8910090D6C0 /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220B9462350E8910090D6C0 /* GlobalConstant.swift */; };
-		2220B94C2350E8910090D6C0 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220B9472350E8910090D6C0 /* AppModel.swift */; };
-		2220B94D2350E8920090D6C0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220B9482350E8910090D6C0 /* APIManager.swift */; };
-		2220B94E2350E8920090D6C0 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2220B9492350E8910090D6C0 /* Utility.swift */; };
+		223AA5FE2352540A00642FB4 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223AA5FD2352540A00642FB4 /* APIHelper.swift */; };
+		223AA600235255B500642FB4 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223AA5FF235255B500642FB4 /* APIManager.swift */; };
+		223AA6022352560E00642FB4 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223AA6012352560E00642FB4 /* AppModel.swift */; };
+		223AA6042352568000642FB4 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223AA6032352568000642FB4 /* Utility.swift */; };
 		22B63686234E6D05001AB5FB /* SwipeCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B63685234E6D05001AB5FB /* SwipeCardView.xib */; };
 		22B63688234E6DB9001AB5FB /* SwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B63687234E6DB9001AB5FB /* SwipeCardView.swift */; };
 		2F13EB0C2349B3E4004EC435 /* MatchesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13EB0B2349B3E4004EC435 /* MatchesVC.swift */; };
@@ -62,11 +61,10 @@
 		2219AA7C234FA37A00145EAB /* SirichanaBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SirichanaBold.ttf; sourceTree = "<group>"; };
 		2219AA7D234FA37A00145EAB /* SirichanaRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SirichanaRegular.ttf; sourceTree = "<group>"; };
 		2219AA80234FAF1500145EAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		2220B9452350E8910090D6C0 /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
-		2220B9462350E8910090D6C0 /* GlobalConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
-		2220B9472350E8910090D6C0 /* AppModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
-		2220B9482350E8910090D6C0 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		2220B9492350E8910090D6C0 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		223AA5FD2352540A00642FB4 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		223AA5FF235255B500642FB4 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		223AA6012352560E00642FB4 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		223AA6032352568000642FB4 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		22B63685234E6D05001AB5FB /* SwipeCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeCardView.xib; sourceTree = "<group>"; };
 		22B63687234E6DB9001AB5FB /* SwipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardView.swift; sourceTree = "<group>"; };
 		2E3669C55EF6CA81D69AD42F /* Pods_LuckyInLove.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuckyInLove.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,17 +128,15 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		2220B9442350E8910090D6C0 /* ProjectHelper */ = {
+		223AA5FC235253AB00642FB4 /* ProjectHelper */ = {
 			isa = PBXGroup;
 			children = (
-				2220B9452350E8910090D6C0 /* APIHelper.swift */,
-				2220B9462350E8910090D6C0 /* GlobalConstant.swift */,
-				2220B9472350E8910090D6C0 /* AppModel.swift */,
-				2220B9482350E8910090D6C0 /* APIManager.swift */,
-				2220B9492350E8910090D6C0 /* Utility.swift */,
+				223AA5FD2352540A00642FB4 /* APIHelper.swift */,
+				223AA5FF235255B500642FB4 /* APIManager.swift */,
+				223AA6012352560E00642FB4 /* AppModel.swift */,
+				223AA6032352568000642FB4 /* Utility.swift */,
 			);
-			name = ProjectHelper;
-			path = "../../../../../Documents/App-Knit/ADEQ/ADEQ/ProjectHelper";
+			path = ProjectHelper;
 			sourceTree = "<group>";
 		};
 		22B63684234E6C90001AB5FB /* SwipeView */ = {
@@ -215,7 +211,7 @@
 		2F7FBE422348CA7900659F1A /* LuckyInLove */ = {
 			isa = PBXGroup;
 			children = (
-				2220B9442350E8910090D6C0 /* ProjectHelper */,
+				223AA5FC235253AB00642FB4 /* ProjectHelper */,
 				2219AA7B234FA35700145EAB /* Font */,
 				2F7FBE432348CA7900659F1A /* AppDelegate.swift */,
 				2F7FBE6E2349151D00659F1A /* Extensions */,
@@ -491,22 +487,21 @@
 				2FFE2C1A2349F69700170668 /* ExploreVC.swift in Sources */,
 				2F13EB122349B48F004EC435 /* MatchesCell.swift in Sources */,
 				220BF353234E537E0021BFAF /* CustomTabBarView.swift in Sources */,
+				223AA5FE2352540A00642FB4 /* APIHelper.swift in Sources */,
 				2F7FBE632349080A00659F1A /* DataModel.swift in Sources */,
+				223AA6022352560E00642FB4 /* AppModel.swift in Sources */,
 				2F7FBE6823490CBA00659F1A /* SignupVC.swift in Sources */,
-				2220B94A2350E8910090D6C0 /* APIHelper.swift in Sources */,
-				2220B94B2350E8910090D6C0 /* GlobalConstant.swift in Sources */,
 				220BF354234E537E0021BFAF /* CustomTabBarController.swift in Sources */,
 				22B63688234E6DB9001AB5FB /* SwipeCardView.swift in Sources */,
 				2F7FBE5F2348DBF300659F1A /* Utilities.swift in Sources */,
-				2220B94C2350E8910090D6C0 /* AppModel.swift in Sources */,
 				2F7FBE462348CA7900659F1A /* LoginVC.swift in Sources */,
+				223AA600235255B500642FB4 /* APIManager.swift in Sources */,
+				223AA6042352568000642FB4 /* Utility.swift in Sources */,
 				2F3654ED2349E97E00CFE90E /* View+Addition.swift in Sources */,
 				2F7FBE442348CA7900659F1A /* AppDelegate.swift in Sources */,
 				2F7FBE65234908DC00659F1A /* Constants.swift in Sources */,
 				2FFE2C1C2349F6BE00170668 /* ProfileVC.swift in Sources */,
 				2F13EB172349C46E004EC435 /* ChatListingVC.swift in Sources */,
-				2220B94E2350E8920090D6C0 /* Utility.swift in Sources */,
-				2220B94D2350E8920090D6C0 /* APIManager.swift in Sources */,
 				2F7FBE702349152E00659F1A /* Font+Addition.swift in Sources */,
 				2F7FBE6D234914DE00659F1A /* BaseView.swift in Sources */,
 			);
