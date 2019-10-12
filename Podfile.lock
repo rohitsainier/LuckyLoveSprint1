@@ -1,0 +1,47 @@
+PODS:
+  - Alamofire (4.9.0)
+  - ESPullToRefresh (2.9)
+  - IQKeyboardManagerSwift (6.5.1)
+  - Koloda (5.0):
+    - pop (~> 1.0)
+  - KVNProgress (2.3.5)
+  - pop (1.0.12)
+  - SDWebImage (4.4.7):
+    - SDWebImage/Core (= 4.4.7)
+  - SDWebImage/Core (4.4.7)
+  - SkyFloatingLabelTextField (3.7.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.6)
+  - ESPullToRefresh
+  - IQKeyboardManagerSwift
+  - Koloda
+  - KVNProgress
+  - SDWebImage (~> 4.0)
+  - SkyFloatingLabelTextField (~> 3.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - ESPullToRefresh
+    - KVNProgress
+    - SDWebImage
+    - SkyFloatingLabelTextField
+  trunk:
+    - IQKeyboardManagerSwift
+    - Koloda
+    - pop
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  ESPullToRefresh: ce058a36454a5032519cc9d8b45da217728cf104
+  IQKeyboardManagerSwift: 9ac7524fad9f9fe9a3b98c927e7772471ca546d2
+  Koloda: 75302d21882cc3e274c1561b1155805ea5919dab
+  KVNProgress: d7046cce142f1aeb740db39dc3cacfe910fac354
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
+  SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
+
+PODFILE CHECKSUM: a0bff927d95255700f4dad587921dcf505d5e492
+
+COCOAPODS: 1.8.3

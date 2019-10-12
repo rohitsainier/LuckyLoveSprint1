@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MatchesVC-->
+        <scene sceneID="TEA-ig-yWa">
+            <objects>
+                <viewController storyboardIdentifier="MatchesVC" id="Zfu-hj-MFS" customClass="MatchesVC" customModule="LuckyInLove" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="phl-gX-Gqd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M44-GQ-3AN">
+                                <rect key="frame" x="0.0" y="88" width="414" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Kk-vy-gx2">
+                                        <rect key="frame" x="10" y="17.5" width="83" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsD-A1-85h">
+                                        <rect key="frame" x="374" y="14" width="32" height="32"/>
+                                        <state key="normal" image="threedot"/>
+                                        <connections>
+                                            <action selector="MatchesMenuButtonAction:" destination="Zfu-hj-MFS" eventType="touchUpInside" id="PON-N9-3h1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="QsD-A1-85h" secondAttribute="trailing" constant="8" id="JTx-4l-6Ki"/>
+                                    <constraint firstItem="QsD-A1-85h" firstAttribute="centerY" secondItem="M44-GQ-3AN" secondAttribute="centerY" id="JzV-8N-5pn"/>
+                                    <constraint firstItem="7Kk-vy-gx2" firstAttribute="centerY" secondItem="M44-GQ-3AN" secondAttribute="centerY" id="Sml-lV-Fzv"/>
+                                    <constraint firstItem="7Kk-vy-gx2" firstAttribute="leading" secondItem="M44-GQ-3AN" secondAttribute="leading" constant="10" id="WKL-87-0Hi"/>
+                                    <constraint firstItem="QsD-A1-85h" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7Kk-vy-gx2" secondAttribute="trailing" constant="8" symbolic="YES" id="Zr0-fp-VhF"/>
+                                    <constraint firstAttribute="height" constant="60" id="nzP-dE-WRa"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2MO-8s-baW">
+                                <rect key="frame" x="0.0" y="148" width="414" height="714"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZlR-6x-8xW">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Mbw-0O-Fxk">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FSb-nt-WXO" firstAttribute="trailing" secondItem="2MO-8s-baW" secondAttribute="trailing" id="4XJ-hj-Ba5"/>
+                            <constraint firstItem="M44-GQ-3AN" firstAttribute="top" secondItem="FSb-nt-WXO" secondAttribute="top" id="N2p-k2-US3"/>
+                            <constraint firstItem="FSb-nt-WXO" firstAttribute="trailing" secondItem="M44-GQ-3AN" secondAttribute="trailing" id="NEQ-Bp-Ak2"/>
+                            <constraint firstItem="2MO-8s-baW" firstAttribute="top" secondItem="M44-GQ-3AN" secondAttribute="bottom" id="lgS-PO-Hgh"/>
+                            <constraint firstItem="2MO-8s-baW" firstAttribute="leading" secondItem="FSb-nt-WXO" secondAttribute="leading" id="mcB-W7-Xed"/>
+                            <constraint firstItem="M44-GQ-3AN" firstAttribute="leading" secondItem="FSb-nt-WXO" secondAttribute="leading" id="pzM-rq-0JF"/>
+                            <constraint firstItem="FSb-nt-WXO" firstAttribute="bottom" secondItem="2MO-8s-baW" secondAttribute="bottom" id="wwg-rJ-W7D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FSb-nt-WXO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="z32-vg-kZx"/>
+                    <connections>
+                        <outlet property="btnMatchesMenu" destination="QsD-A1-85h" id="h1L-gJ-bkz"/>
+                        <outlet property="matchesCollectionView" destination="2MO-8s-baW" id="e0D-fe-d7w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uGi-vq-ajd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1331.8840579710145" y="1690.8482142857142"/>
+        </scene>
+        <!--Matches-->
+        <scene sceneID="ovO-aw-eeg">
+            <objects>
+                <navigationController storyboardIdentifier="MatchesNavigation" automaticallyAdjustsScrollViewInsets="NO" id="0wJ-Wq-MbL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Matches" image="heart" id="wUQ-5k-wp8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nfD-Q2-a6O">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zfu-hj-MFS" kind="relationship" relationship="rootViewController" id="Am8-cK-4tD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9uK-Oc-FEe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="421.73913043478262" y="1690.8482142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart" width="32" height="32"/>
+        <image name="threedot" width="32" height="32"/>
+    </resources>
+</document>

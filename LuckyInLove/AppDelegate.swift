@@ -12,10 +12,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var customTabbarVc: CustomTabBarController!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        IQKeyboardManager.shared.enable = true
+
         return true
     }
 
@@ -39,6 +41,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    //MARK: - sharedDelegate
+    func sharedDelegate() -> AppDelegate
+    {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    
+    //MARK: - storyboard
+    func storyboard() -> UIStoryboard
+    {
+        return UIStoryboard(name: "Main", bundle: nil)
+    }
+    
+    //MARK: - navigateToDashboard
+    func navigateToDashboard()
+    {
+        customTabbarVc = self.storyboard().instantiateViewController(withIdentifier: "CustomTabBarController") as? CustomTabBarController
+        
+        if let rootNavigatioVC : UINavigationController = self.window?.rootViewController as? UINavigationController
+        {
+            rootNavigatioVC.pushViewController(customTabbarVc, animated: false)
+        }
+        
     }
 
 

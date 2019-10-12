@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat ListingVC-->
+        <scene sceneID="AfE-A8-Cjx">
+            <objects>
+                <viewController storyboardIdentifier="ChatListingVC" id="yV6-ly-egN" customClass="ChatListingVC" customModule="LuckyInLove" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nRw-NK-8nD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0Q-Ee-5P8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiW-al-M0p">
+                                        <rect key="frame" x="10" y="17.5" width="98" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sb-DC-IiH">
+                                        <rect key="frame" x="374" y="14" width="32" height="32"/>
+                                        <state key="normal" image="threedot"/>
+                                        <connections>
+                                            <action selector="ChatMenuButtonAction:" destination="yV6-ly-egN" eventType="touchUpInside" id="KKu-DZ-f3q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="iiW-al-M0p" firstAttribute="leading" secondItem="a0Q-Ee-5P8" secondAttribute="leading" constant="10" id="8pt-4h-UAm"/>
+                                    <constraint firstAttribute="trailing" secondItem="8sb-DC-IiH" secondAttribute="trailing" constant="8" id="QQH-n1-Om2"/>
+                                    <constraint firstItem="8sb-DC-IiH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iiW-al-M0p" secondAttribute="trailing" constant="8" symbolic="YES" id="VbP-yj-QXw"/>
+                                    <constraint firstItem="8sb-DC-IiH" firstAttribute="centerY" secondItem="a0Q-Ee-5P8" secondAttribute="centerY" id="atS-zB-S1V"/>
+                                    <constraint firstAttribute="height" constant="60" id="n8f-DK-5kl"/>
+                                    <constraint firstItem="iiW-al-M0p" firstAttribute="centerY" secondItem="a0Q-Ee-5P8" secondAttribute="centerY" id="taa-mT-kKh"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JY1-fB-opU">
+                                <rect key="frame" x="0.0" y="148" width="414" height="714"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HMO-Kn-bgh" firstAttribute="trailing" secondItem="JY1-fB-opU" secondAttribute="trailing" id="F3h-Mz-ckV"/>
+                            <constraint firstItem="a0Q-Ee-5P8" firstAttribute="top" secondItem="HMO-Kn-bgh" secondAttribute="top" id="TwK-51-l59"/>
+                            <constraint firstItem="HMO-Kn-bgh" firstAttribute="trailing" secondItem="a0Q-Ee-5P8" secondAttribute="trailing" id="aAp-we-n3r"/>
+                            <constraint firstItem="JY1-fB-opU" firstAttribute="leading" secondItem="HMO-Kn-bgh" secondAttribute="leading" id="emu-7B-NHh"/>
+                            <constraint firstItem="JY1-fB-opU" firstAttribute="top" secondItem="a0Q-Ee-5P8" secondAttribute="bottom" id="iHa-jz-Zks"/>
+                            <constraint firstItem="a0Q-Ee-5P8" firstAttribute="leading" secondItem="HMO-Kn-bgh" secondAttribute="leading" id="iNO-cg-Okc"/>
+                            <constraint firstItem="HMO-Kn-bgh" firstAttribute="bottom" secondItem="JY1-fB-opU" secondAttribute="bottom" id="jEW-MX-nut"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HMO-Kn-bgh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rRd-5k-vzz"/>
+                    <connections>
+                        <outlet property="btnChatMenu" destination="8sb-DC-IiH" id="40O-i7-KCC"/>
+                        <outlet property="tblChatlisting" destination="JY1-fB-opU" id="jnH-Ec-O3m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0hY-Wf-iZq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2021.7391304347827" y="1690.8482142857142"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="PoV-rF-SD5">
+            <objects>
+                <navigationController storyboardIdentifier="ChatNavigation" automaticallyAdjustsScrollViewInsets="NO" id="APO-Ye-cC9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Chat" image="message" id="rWQ-Wt-IaY"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="62U-ay-j20">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yV6-ly-egN" kind="relationship" relationship="rootViewController" id="X3e-hX-SgE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDe-jE-714" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1111.5942028985507" y="1690.8482142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="message" width="32" height="32"/>
+        <image name="threedot" width="32" height="32"/>
+    </resources>
+</document>

@@ -3,25 +3,90 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220BF347234E4DFC0021BFAF /* Explore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220BF346234E4DFC0021BFAF /* Explore.storyboard */; };
+		220BF349234E4E120021BFAF /* Matches.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220BF348234E4E120021BFAF /* Matches.storyboard */; };
+		220BF34B234E4E210021BFAF /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220BF34A234E4E210021BFAF /* Chat.storyboard */; };
+		220BF34D234E4E2C0021BFAF /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220BF34C234E4E2C0021BFAF /* Profile.storyboard */; };
+		220BF352234E537E0021BFAF /* CustomTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 220BF34F234E537E0021BFAF /* CustomTabBarView.xib */; };
+		220BF353234E537E0021BFAF /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220BF350234E537E0021BFAF /* CustomTabBarView.swift */; };
+		220BF354234E537E0021BFAF /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220BF351234E537E0021BFAF /* CustomTabBarController.swift */; };
+		2219AA7E234FA37A00145EAB /* SirichanaBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2219AA7C234FA37A00145EAB /* SirichanaBold.ttf */; };
+		2219AA7F234FA37A00145EAB /* SirichanaRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2219AA7D234FA37A00145EAB /* SirichanaRegular.ttf */; };
+		22B63686234E6D05001AB5FB /* SwipeCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B63685234E6D05001AB5FB /* SwipeCardView.xib */; };
+		22B63688234E6DB9001AB5FB /* SwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B63687234E6DB9001AB5FB /* SwipeCardView.swift */; };
+		2F13EB0C2349B3E4004EC435 /* MatchesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13EB0B2349B3E4004EC435 /* MatchesVC.swift */; };
+		2F13EB122349B48F004EC435 /* MatchesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13EB102349B48F004EC435 /* MatchesCell.swift */; };
+		2F13EB132349B48F004EC435 /* MatchesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F13EB112349B48F004EC435 /* MatchesCell.xib */; };
+		2F13EB152349B82B004EC435 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2F13EB142349B82B004EC435 /* 5.jpg */; };
+		2F13EB172349C46E004EC435 /* ChatListingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13EB162349C46E004EC435 /* ChatListingVC.swift */; };
+		2F13EB1A2349C689004EC435 /* ChatListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13EB182349C689004EC435 /* ChatListingCell.swift */; };
+		2F13EB1B2349C689004EC435 /* ChatListingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F13EB192349C689004EC435 /* ChatListingCell.xib */; };
+		2F3654ED2349E97E00CFE90E /* View+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3654EC2349E97E00CFE90E /* View+Addition.swift */; };
 		2F7FBE442348CA7900659F1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FBE432348CA7900659F1A /* AppDelegate.swift */; };
-		2F7FBE462348CA7900659F1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FBE452348CA7900659F1A /* ViewController.swift */; };
+		2F7FBE462348CA7900659F1A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FBE452348CA7900659F1A /* LoginVC.swift */; };
 		2F7FBE492348CA7900659F1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7FBE472348CA7900659F1A /* Main.storyboard */; };
 		2F7FBE4B2348CA7B00659F1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F7FBE4A2348CA7B00659F1A /* Assets.xcassets */; };
 		2F7FBE4E2348CA7B00659F1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7FBE4C2348CA7B00659F1A /* LaunchScreen.storyboard */; };
+		2F7FBE5D2348D8B600659F1A /* logoApp.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7FBE5C2348D8B600659F1A /* logoApp.png */; };
+		2F7FBE5F2348DBF300659F1A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FBE5E2348DBF300659F1A /* Utilities.swift */; };
+		2F7FBE612348DC7400659F1A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FBE602348DC7400659F1A /* APIManager.swift */; };
+		2F7FBE632349080A00659F1A /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FBE622349080A00659F1A /* DataModel.swift */; };
+		2F7FBE65234908DC00659F1A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FBE64234908DB00659F1A /* Constants.swift */; };
+		2F7FBE6823490CBA00659F1A /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FBE6723490CBA00659F1A /* SignupVC.swift */; };
+		2F7FBE6D234914DE00659F1A /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FBE6C234914DE00659F1A /* BaseView.swift */; };
+		2F7FBE702349152E00659F1A /* Font+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7FBE6F2349152E00659F1A /* Font+Addition.swift */; };
+		2FFE2C1A2349F69700170668 /* ExploreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE2C192349F69700170668 /* ExploreVC.swift */; };
+		2FFE2C1C2349F6BE00170668 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFE2C1B2349F6BE00170668 /* ProfileVC.swift */; };
+		2FFE2C1E234A167A00170668 /* profileImage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2FFE2C1D234A167900170668 /* profileImage.jpeg */; };
+		E0CCA59CB7EB8F99CB12DDC7 /* Pods_LuckyInLove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E3669C55EF6CA81D69AD42F /* Pods_LuckyInLove.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F6F542E6FD04B1CDE6E0759 /* Pods-LuckyInLove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyInLove.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuckyInLove/Pods-LuckyInLove.release.xcconfig"; sourceTree = "<group>"; };
+		220BF346234E4DFC0021BFAF /* Explore.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Explore.storyboard; sourceTree = "<group>"; };
+		220BF348234E4E120021BFAF /* Matches.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Matches.storyboard; sourceTree = "<group>"; };
+		220BF34A234E4E210021BFAF /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		220BF34C234E4E2C0021BFAF /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		220BF34F234E537E0021BFAF /* CustomTabBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTabBarView.xib; sourceTree = "<group>"; };
+		220BF350234E537E0021BFAF /* CustomTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		220BF351234E537E0021BFAF /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		2219AA7C234FA37A00145EAB /* SirichanaBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SirichanaBold.ttf; sourceTree = "<group>"; };
+		2219AA7D234FA37A00145EAB /* SirichanaRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SirichanaRegular.ttf; sourceTree = "<group>"; };
+		22B63685234E6D05001AB5FB /* SwipeCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwipeCardView.xib; sourceTree = "<group>"; };
+		22B63687234E6DB9001AB5FB /* SwipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCardView.swift; sourceTree = "<group>"; };
+		2E3669C55EF6CA81D69AD42F /* Pods_LuckyInLove.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuckyInLove.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F13EB0B2349B3E4004EC435 /* MatchesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesVC.swift; sourceTree = "<group>"; };
+		2F13EB102349B48F004EC435 /* MatchesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCell.swift; sourceTree = "<group>"; };
+		2F13EB112349B48F004EC435 /* MatchesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchesCell.xib; sourceTree = "<group>"; };
+		2F13EB142349B82B004EC435 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		2F13EB162349C46E004EC435 /* ChatListingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListingVC.swift; sourceTree = "<group>"; };
+		2F13EB182349C689004EC435 /* ChatListingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListingCell.swift; sourceTree = "<group>"; };
+		2F13EB192349C689004EC435 /* ChatListingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatListingCell.xib; sourceTree = "<group>"; };
+		2F3654EC2349E97E00CFE90E /* View+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Addition.swift"; sourceTree = "<group>"; };
 		2F7FBE402348CA7900659F1A /* LuckyInLove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuckyInLove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7FBE432348CA7900659F1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F7FBE452348CA7900659F1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2F7FBE452348CA7900659F1A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		2F7FBE482348CA7900659F1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F7FBE4A2348CA7B00659F1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F7FBE4D2348CA7B00659F1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F7FBE4F2348CA7B00659F1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F7FBE5C2348D8B600659F1A /* logoApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoApp.png; sourceTree = "<group>"; };
+		2F7FBE5E2348DBF300659F1A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		2F7FBE602348DC7400659F1A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		2F7FBE622349080A00659F1A /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		2F7FBE64234908DB00659F1A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2F7FBE6723490CBA00659F1A /* SignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
+		2F7FBE6923490E6200659F1A /* LuckyInLove-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LuckyInLove-Bridging-Header.h"; sourceTree = "<group>"; };
+		2F7FBE6C234914DE00659F1A /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		2F7FBE6F2349152E00659F1A /* Font+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Addition.swift"; sourceTree = "<group>"; };
+		2FFE2C192349F69700170668 /* ExploreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreVC.swift; sourceTree = "<group>"; };
+		2FFE2C1B2349F6BE00170668 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		2FFE2C1D234A167900170668 /* profileImage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profileImage.jpeg; sourceTree = "<group>"; };
+		7856809EA73316771507634A /* Pods-LuckyInLove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyInLove.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LuckyInLove/Pods-LuckyInLove.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +94,90 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0CCA59CB7EB8F99CB12DDC7 /* Pods_LuckyInLove.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		220BF34E234E537E0021BFAF /* Custom Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				220BF34F234E537E0021BFAF /* CustomTabBarView.xib */,
+				220BF350234E537E0021BFAF /* CustomTabBarView.swift */,
+				220BF351234E537E0021BFAF /* CustomTabBarController.swift */,
+			);
+			path = "Custom Tab Bar";
+			sourceTree = "<group>";
+		};
+		2219AA7B234FA35700145EAB /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				2219AA7C234FA37A00145EAB /* SirichanaBold.ttf */,
+				2219AA7D234FA37A00145EAB /* SirichanaRegular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		22B63684234E6C90001AB5FB /* SwipeView */ = {
+			isa = PBXGroup;
+			children = (
+				22B63685234E6D05001AB5FB /* SwipeCardView.xib */,
+				22B63687234E6DB9001AB5FB /* SwipeCardView.swift */,
+			);
+			path = SwipeView;
+			sourceTree = "<group>";
+		};
+		2F13EB092349B3B7004EC435 /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				2F13EB0B2349B3E4004EC435 /* MatchesVC.swift */,
+			);
+			path = Matches;
+			sourceTree = "<group>";
+		};
+		2F13EB0A2349B3BE004EC435 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				2F13EB162349C46E004EC435 /* ChatListingVC.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		2F13EB0D2349B453004EC435 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2F13EB0F2349B477004EC435 /* MatchesCell */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		2F13EB0E2349B45C004EC435 /* TableviewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2F13EB182349C689004EC435 /* ChatListingCell.swift */,
+				2F13EB192349C689004EC435 /* ChatListingCell.xib */,
+			);
+			path = TableviewCell;
+			sourceTree = "<group>";
+		};
+		2F13EB0F2349B477004EC435 /* MatchesCell */ = {
+			isa = PBXGroup;
+			children = (
+				2F13EB102349B48F004EC435 /* MatchesCell.swift */,
+				2F13EB112349B48F004EC435 /* MatchesCell.xib */,
+			);
+			path = MatchesCell;
+			sourceTree = "<group>";
+		};
 		2F7FBE372348CA7900659F1A = {
 			isa = PBXGroup;
 			children = (
 				2F7FBE422348CA7900659F1A /* LuckyInLove */,
 				2F7FBE412348CA7900659F1A /* Products */,
+				CFB8971547572B6DFE394593 /* Pods */,
+				31E4DF6DBF2EA9CBFD7EA160 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +192,144 @@
 		2F7FBE422348CA7900659F1A /* LuckyInLove */ = {
 			isa = PBXGroup;
 			children = (
+				2219AA7B234FA35700145EAB /* Font */,
 				2F7FBE432348CA7900659F1A /* AppDelegate.swift */,
-				2F7FBE452348CA7900659F1A /* ViewController.swift */,
-				2F7FBE472348CA7900659F1A /* Main.storyboard */,
+				2F7FBE6E2349151D00659F1A /* Extensions */,
+				2F7FBE582348D83E00659F1A /* Utilities */,
+				2F7FBE592348D84600659F1A /* Resources */,
+				2F7FBE572348D83600659F1A /* Xibs */,
+				2F7FBE562348D82F00659F1A /* Modal */,
+				220BF34E234E537E0021BFAF /* Custom Tab Bar */,
+				2F7FBE552348D7E600659F1A /* Controllers */,
+				2F7FBE5A2348D85900659F1A /* StoryBoards */,
 				2F7FBE4A2348CA7B00659F1A /* Assets.xcassets */,
 				2F7FBE4C2348CA7B00659F1A /* LaunchScreen.storyboard */,
 				2F7FBE4F2348CA7B00659F1A /* Info.plist */,
 			);
 			path = LuckyInLove;
+			sourceTree = "<group>";
+		};
+		2F7FBE552348D7E600659F1A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2F7FBE6C234914DE00659F1A /* BaseView.swift */,
+				2F7FBE6623490CA000659F1A /* Login */,
+				2FFE2C172349F5F600170668 /* Explore */,
+				2F13EB092349B3B7004EC435 /* Matches */,
+				2F13EB0A2349B3BE004EC435 /* Chat */,
+				2FFE2C182349F60000170668 /* Profile */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2F7FBE562348D82F00659F1A /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		2F7FBE572348D83600659F1A /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				22B63684234E6C90001AB5FB /* SwipeView */,
+				2F13EB0E2349B45C004EC435 /* TableviewCell */,
+				2F13EB0D2349B453004EC435 /* CollectionViewCell */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		2F7FBE582348D83E00659F1A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2F7FBE5E2348DBF300659F1A /* Utilities.swift */,
+				2F7FBE602348DC7400659F1A /* APIManager.swift */,
+				2F7FBE64234908DB00659F1A /* Constants.swift */,
+				2F7FBE622349080A00659F1A /* DataModel.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		2F7FBE592348D84600659F1A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2F7FBE5B2348D89700659F1A /* Images */,
+				2F7FBE6923490E6200659F1A /* LuckyInLove-Bridging-Header.h */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2F7FBE5A2348D85900659F1A /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				2F7FBE472348CA7900659F1A /* Main.storyboard */,
+				220BF346234E4DFC0021BFAF /* Explore.storyboard */,
+				220BF348234E4E120021BFAF /* Matches.storyboard */,
+				220BF34A234E4E210021BFAF /* Chat.storyboard */,
+				220BF34C234E4E2C0021BFAF /* Profile.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		2F7FBE5B2348D89700659F1A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2F13EB142349B82B004EC435 /* 5.jpg */,
+				2F7FBE5C2348D8B600659F1A /* logoApp.png */,
+				2FFE2C1D234A167900170668 /* profileImage.jpeg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		2F7FBE6623490CA000659F1A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2F7FBE452348CA7900659F1A /* LoginVC.swift */,
+				2F7FBE6723490CBA00659F1A /* SignupVC.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2F7FBE6E2349151D00659F1A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2F7FBE6F2349152E00659F1A /* Font+Addition.swift */,
+				2F3654EC2349E97E00CFE90E /* View+Addition.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2FFE2C172349F5F600170668 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				2FFE2C192349F69700170668 /* ExploreVC.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		2FFE2C182349F60000170668 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2FFE2C1B2349F6BE00170668 /* ProfileVC.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		31E4DF6DBF2EA9CBFD7EA160 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E3669C55EF6CA81D69AD42F /* Pods_LuckyInLove.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFB8971547572B6DFE394593 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7856809EA73316771507634A /* Pods-LuckyInLove.debug.xcconfig */,
+				0F6F542E6FD04B1CDE6E0759 /* Pods-LuckyInLove.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +339,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F7FBE522348CA7B00659F1A /* Build configuration list for PBXNativeTarget "LuckyInLove" */;
 			buildPhases = (
+				043717EB49B5EC28EE5EF451 /* [CP] Check Pods Manifest.lock */,
 				2F7FBE3C2348CA7900659F1A /* Sources */,
 				2F7FBE3D2348CA7900659F1A /* Frameworks */,
 				2F7FBE3E2348CA7900659F1A /* Resources */,
+				6552BC3E155E3507FFF11905 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +366,7 @@
 				TargetAttributes = {
 					2F7FBE3F2348CA7900659F1A = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -122,21 +393,93 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F7FBE5D2348D8B600659F1A /* logoApp.png in Resources */,
+				220BF34B234E4E210021BFAF /* Chat.storyboard in Resources */,
+				2FFE2C1E234A167A00170668 /* profileImage.jpeg in Resources */,
+				220BF349234E4E120021BFAF /* Matches.storyboard in Resources */,
+				2219AA7F234FA37A00145EAB /* SirichanaRegular.ttf in Resources */,
 				2F7FBE4E2348CA7B00659F1A /* LaunchScreen.storyboard in Resources */,
 				2F7FBE4B2348CA7B00659F1A /* Assets.xcassets in Resources */,
+				220BF34D234E4E2C0021BFAF /* Profile.storyboard in Resources */,
+				220BF347234E4DFC0021BFAF /* Explore.storyboard in Resources */,
+				2F13EB152349B82B004EC435 /* 5.jpg in Resources */,
+				2219AA7E234FA37A00145EAB /* SirichanaBold.ttf in Resources */,
 				2F7FBE492348CA7900659F1A /* Main.storyboard in Resources */,
+				2F13EB1B2349C689004EC435 /* ChatListingCell.xib in Resources */,
+				2F13EB132349B48F004EC435 /* MatchesCell.xib in Resources */,
+				220BF352234E537E0021BFAF /* CustomTabBarView.xib in Resources */,
+				22B63686234E6D05001AB5FB /* SwipeCardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		043717EB49B5EC28EE5EF451 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LuckyInLove-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6552BC3E155E3507FFF11905 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LuckyInLove/Pods-LuckyInLove-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LuckyInLove/Pods-LuckyInLove-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LuckyInLove/Pods-LuckyInLove-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2F7FBE3C2348CA7900659F1A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F7FBE462348CA7900659F1A /* ViewController.swift in Sources */,
+				2F13EB0C2349B3E4004EC435 /* MatchesVC.swift in Sources */,
+				2F13EB1A2349C689004EC435 /* ChatListingCell.swift in Sources */,
+				2FFE2C1A2349F69700170668 /* ExploreVC.swift in Sources */,
+				2F13EB122349B48F004EC435 /* MatchesCell.swift in Sources */,
+				220BF353234E537E0021BFAF /* CustomTabBarView.swift in Sources */,
+				2F7FBE632349080A00659F1A /* DataModel.swift in Sources */,
+				2F7FBE6823490CBA00659F1A /* SignupVC.swift in Sources */,
+				2F7FBE612348DC7400659F1A /* APIManager.swift in Sources */,
+				220BF354234E537E0021BFAF /* CustomTabBarController.swift in Sources */,
+				22B63688234E6DB9001AB5FB /* SwipeCardView.swift in Sources */,
+				2F7FBE5F2348DBF300659F1A /* Utilities.swift in Sources */,
+				2F7FBE462348CA7900659F1A /* LoginVC.swift in Sources */,
+				2F3654ED2349E97E00CFE90E /* View+Addition.swift in Sources */,
 				2F7FBE442348CA7900659F1A /* AppDelegate.swift in Sources */,
+				2F7FBE65234908DC00659F1A /* Constants.swift in Sources */,
+				2FFE2C1C2349F6BE00170668 /* ProfileVC.swift in Sources */,
+				2F13EB172349C46E004EC435 /* ChatListingVC.swift in Sources */,
+				2F7FBE702349152E00659F1A /* Font+Addition.swift in Sources */,
+				2F7FBE6D234914DE00659F1A /* BaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,37 +623,46 @@
 		};
 		2F7FBE532348CA7B00659F1A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7856809EA73316771507634A /* Pods-LuckyInLove.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9ANYU274JT;
+				DEVELOPMENT_TEAM = 6Q233F3ZPX;
 				INFOPLIST_FILE = LuckyInLove/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.developer.lucky.LuckyInLove;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.Lucky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LuckyInLove/Resources/LuckyInLove-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		2F7FBE542348CA7B00659F1A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F6F542E6FD04B1CDE6E0759 /* Pods-LuckyInLove.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9ANYU274JT;
+				DEVELOPMENT_TEAM = 6Q233F3ZPX;
 				INFOPLIST_FILE = LuckyInLove/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.developer.lucky.LuckyInLove;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.Lucky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LuckyInLove/Resources/LuckyInLove-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

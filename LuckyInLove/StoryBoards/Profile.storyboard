@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ProfileVC-->
+        <scene sceneID="KGg-A9-sM0">
+            <objects>
+                <viewController storyboardIdentifier="ProfileVC" id="GHL-9e-n7B" customClass="ProfileVC" customModule="LuckyInLove" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iae-UF-bCf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJm-iA-AIG">
+                                <rect key="frame" x="0.0" y="88" width="320" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROF-54-X4d">
+                                        <rect key="frame" x="10" y="17.5" width="62" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAv-jd-fTP">
+                                        <rect key="frame" x="280" y="14" width="32" height="32"/>
+                                        <state key="normal" image="threedot"/>
+                                        <connections>
+                                            <action selector="ProfileMenuButtonAction:" destination="GHL-9e-n7B" eventType="touchUpInside" id="hvB-0p-B7Z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ROF-54-X4d" firstAttribute="leading" secondItem="aJm-iA-AIG" secondAttribute="leading" constant="10" id="C2v-Mq-DBG"/>
+                                    <constraint firstAttribute="height" constant="60" id="FIU-DE-z8u"/>
+                                    <constraint firstItem="bAv-jd-fTP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ROF-54-X4d" secondAttribute="trailing" constant="8" symbolic="YES" id="RlR-gy-maB"/>
+                                    <constraint firstAttribute="trailing" secondItem="bAv-jd-fTP" secondAttribute="trailing" constant="8" id="Ufp-25-Zid"/>
+                                    <constraint firstItem="ROF-54-X4d" firstAttribute="centerY" secondItem="aJm-iA-AIG" secondAttribute="centerY" id="a9l-rO-5Tl"/>
+                                    <constraint firstItem="bAv-jd-fTP" firstAttribute="centerY" secondItem="aJm-iA-AIG" secondAttribute="centerY" id="rnf-pl-iv8"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XL7-0C-Qrc">
+                                <rect key="frame" x="0.0" y="148" width="320" height="352"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XiB-e8-h0F">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="370"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImage.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="B4t-Pu-y40">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="MXl-N3-7UT"/>
+                                                </constraints>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mF2-bt-Rev" customClass="View_Addition" customModule="LuckyInLove" customModuleProvider="target">
+                                                <rect key="frame" x="30" y="270" width="260" height="220"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="220" id="ljR-oj-aNh"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="B4t-Pu-y40" firstAttribute="top" secondItem="XiB-e8-h0F" secondAttribute="top" id="5Mh-oF-qHX"/>
+                                            <constraint firstAttribute="height" constant="370" id="Ghk-ri-WL0"/>
+                                            <constraint firstAttribute="trailing" secondItem="B4t-Pu-y40" secondAttribute="trailing" id="JhW-6z-qID"/>
+                                            <constraint firstItem="mF2-bt-Rev" firstAttribute="top" secondItem="B4t-Pu-y40" secondAttribute="bottom" constant="-30" id="PWZ-nG-fSX"/>
+                                            <constraint firstItem="B4t-Pu-y40" firstAttribute="leading" secondItem="XiB-e8-h0F" secondAttribute="leading" id="eg2-4g-jpD"/>
+                                            <constraint firstItem="mF2-bt-Rev" firstAttribute="leading" secondItem="B4t-Pu-y40" secondAttribute="leading" constant="30" id="sfy-4L-fl7"/>
+                                            <constraint firstItem="mF2-bt-Rev" firstAttribute="trailing" secondItem="B4t-Pu-y40" secondAttribute="trailing" constant="-30" id="wwD-ML-WqO"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="XiB-e8-h0F" firstAttribute="top" secondItem="XL7-0C-Qrc" secondAttribute="top" id="2pJ-PC-7hh"/>
+                                    <constraint firstItem="XiB-e8-h0F" firstAttribute="width" secondItem="XL7-0C-Qrc" secondAttribute="width" id="9mf-BH-zta"/>
+                                    <constraint firstAttribute="bottom" secondItem="XiB-e8-h0F" secondAttribute="bottom" id="Iqg-Xv-hx1"/>
+                                    <constraint firstAttribute="trailing" secondItem="XiB-e8-h0F" secondAttribute="trailing" id="Xnh-af-SuS"/>
+                                    <constraint firstItem="XiB-e8-h0F" firstAttribute="leading" secondItem="XL7-0C-Qrc" secondAttribute="leading" id="ea7-Wj-lrf"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aJm-iA-AIG" firstAttribute="leading" secondItem="dYp-Hi-Abf" secondAttribute="leading" id="73B-R0-5rB"/>
+                            <constraint firstItem="aJm-iA-AIG" firstAttribute="top" secondItem="dYp-Hi-Abf" secondAttribute="top" id="EHp-zk-o1O"/>
+                            <constraint firstItem="dYp-Hi-Abf" firstAttribute="trailing" secondItem="XL7-0C-Qrc" secondAttribute="trailing" id="Fb3-bE-gdt"/>
+                            <constraint firstItem="XL7-0C-Qrc" firstAttribute="top" secondItem="aJm-iA-AIG" secondAttribute="bottom" id="L49-WO-qqO"/>
+                            <constraint firstItem="XL7-0C-Qrc" firstAttribute="leading" secondItem="dYp-Hi-Abf" secondAttribute="leading" id="PAz-Bw-kvD"/>
+                            <constraint firstItem="dYp-Hi-Abf" firstAttribute="bottom" secondItem="XL7-0C-Qrc" secondAttribute="bottom" id="sk5-j1-uW4"/>
+                            <constraint firstItem="dYp-Hi-Abf" firstAttribute="trailing" secondItem="aJm-iA-AIG" secondAttribute="trailing" id="yZy-mf-6Kb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dYp-Hi-Abf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pDX-JZ-5C8"/>
+                    <size key="freeformSize" width="320" height="500"/>
+                    <connections>
+                        <outlet property="btnProfileMenu" destination="bAv-jd-fTP" id="MEa-CU-5V2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbT-YX-M7M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2807.2463768115945" y="1689.5089285714284"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="3Sb-Xh-Ugl">
+            <objects>
+                <navigationController storyboardIdentifier="ProfileNavigation" automaticallyAdjustsScrollViewInsets="NO" id="InU-K0-wpY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" id="EF7-7u-ECR"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="66v-p6-srT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GHL-9e-n7B" kind="relationship" relationship="rootViewController" id="RLL-My-JCU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hyd-9n-KzL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1897.1014492753625" y="1689.5089285714284"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person" width="32" height="32"/>
+        <image name="profileImage.jpeg" width="1200" height="800"/>
+        <image name="threedot" width="32" height="32"/>
+    </resources>
+</document>
