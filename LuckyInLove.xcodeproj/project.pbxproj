@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220820F22352F9CA00693030 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220820F12352F9CA00693030 /* LoginModel.swift */; };
 		220BF347234E4DFC0021BFAF /* Explore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220BF346234E4DFC0021BFAF /* Explore.storyboard */; };
 		220BF349234E4E120021BFAF /* Matches.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220BF348234E4E120021BFAF /* Matches.storyboard */; };
 		220BF34B234E4E210021BFAF /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220BF34A234E4E210021BFAF /* Chat.storyboard */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		0F6F542E6FD04B1CDE6E0759 /* Pods-LuckyInLove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuckyInLove.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuckyInLove/Pods-LuckyInLove.release.xcconfig"; sourceTree = "<group>"; };
+		220820F12352F9CA00693030 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginModel.swift; path = LuckyInLove/Xibs/TableviewCell/LoginModel.swift; sourceTree = SOURCE_ROOT; };
 		220BF346234E4DFC0021BFAF /* Explore.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Explore.storyboard; sourceTree = "<group>"; };
 		220BF348234E4E120021BFAF /* Matches.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Matches.storyboard; sourceTree = "<group>"; };
 		220BF34A234E4E210021BFAF /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 		2F7FBE562348D82F00659F1A /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				220820F12352F9CA00693030 /* LoginModel.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				2F7FBE65234908DC00659F1A /* Constants.swift in Sources */,
 				223AA60F2352684E00642FB4 /* ProfileFooterCell.swift in Sources */,
 				2FFE2C1C2349F6BE00170668 /* ProfileVC.swift in Sources */,
+				220820F22352F9CA00693030 /* LoginModel.swift in Sources */,
 				2F13EB172349C46E004EC435 /* ChatListingVC.swift in Sources */,
 				2F7FBE702349152E00659F1A /* Font+Addition.swift in Sources */,
 				2F7FBE6D234914DE00659F1A /* BaseView.swift in Sources */,

@@ -58,25 +58,26 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegat
     //MARK:- Button Action
     
     @IBAction func LoginButtonAction(_ sender: Any) {
-//        guard let username = txtEmail.text else{return}
-//        guard let password = txtPassword.text else{return}
-//        if username == ""{
-//            displayToast("Please enter your username")
-//        }
-//        else if password == ""{
-//            displayToast("Please enter your password")
-//        }
-//        else{
-//            let params: [String: Any] = ["email": username,"Password": password]
-//            GCD.USER.LOGIN.async {
-//                APIManager.sharedInstance.I_AM_COOL(params: params, api: API.USER.Login, Loader: true, isMultipart: false) { (responseData) in
-//                    print(responseData)
-//
-//                }
-//            }
-//
-//        }
-        AppDelegate().sharedDelegate().navigateToDashboard()
+        guard let username = txtEmail.text else{return}
+        guard let password = txtPassword.text else{return}
+        if username == ""{
+            displayToast("Please enter your username")
+        }
+        else if password == ""{
+            displayToast("Please enter your password")
+        }
+        else{
+            let params: [String: Any] = ["email": username,"Password": password,"device_token":"","device":"ios"]
+            GCD.USER.LOGIN.async {
+                APIManager.sharedInstance.I_AM_COOL(params: params, api: API.USER.Login, Loader: true, isMultipart: false) { (responseData) in
+                    print(responseData)
+                AppDelegate().sharedDelegate().navigateToDashboard()
+
+                }
+            }
+
+        }
+        
         
     }
     

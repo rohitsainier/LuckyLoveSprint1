@@ -11,6 +11,41 @@ import UIKit
 import Toaster
 import SDWebImage
 
+//MARK:- Color function
+func sainiColorFromHex(hex : String) -> UIColor
+{
+    return colorWithHexString(hex, alpha: 1.0)
+}
+
+func colorFromHex(hex : String, alpha:CGFloat) -> UIColor
+{
+    return colorWithHexString(hex, alpha: alpha)
+}
+
+func colorWithHexString(_ stringToConvert:String, alpha:CGFloat) -> UIColor {
+    
+    var cString:String = stringToConvert.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+    
+    if (cString.hasPrefix("#")) {
+        cString.remove(at: cString.startIndex)
+    }
+    
+    if ((cString.count) != 6) {
+        return UIColor.gray
+    }
+    
+    var rgbValue:UInt32 = 0
+    Scanner(string: cString).scanHexInt32(&rgbValue)
+    
+    return UIColor(
+        red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+        green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+        blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+        alpha: alpha
+    )
+}
+
+
 class SKSearchBar: UISearchBar {
     
     private enum SubviewKey: String {

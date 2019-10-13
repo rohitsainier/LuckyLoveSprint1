@@ -44,5 +44,19 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSCameraUsageDescription</key>
+    <string>LuckyInLove need to access your camera to take picture for creating  Profile </string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>LuckyInLove need to access your current location to show your nearby  profiles</string>
+    <key>NSLocationUsageDescription</key>
+    <string>LuckyInLove need to access your current location to show your nearby  profiles</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>LuckyInLove need to access your current location to show your nearby  profiles</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>LuckyInLove need to access your microphone to record videos</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>LuckyInLove need to access your photo library to save post photos</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>LuckyInLove need to access your photo library to select picture for creatig Profile</string>
 </dict>
 </plist>
