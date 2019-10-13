@@ -28,7 +28,7 @@ class ChatCell: UITableViewCell {
     
     var MSG: Message!{
         didSet{
-            if MSG.owner == .sender{
+            if MSG.owner == .receiver{
                 chatText.text = MSG.content as? String
                 userName.text = ""
                 timeDateLbl.text = ""
@@ -66,8 +66,8 @@ class ChatCell: UITableViewCell {
         }
         else if type == .outgoing{
             chatStackView.alignment = .trailing
-            chatText.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            chatBackgroundView.backgroundColor = #colorLiteral(red: 0.7803921569, green: 0.8352941176, blue: 0.7647058824, alpha: 1)
+            chatText.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            chatBackgroundView.backgroundColor = #colorLiteral(red: 0.9137254902, green: 0.1176470588, blue: 0.3882352941, alpha: 1)
         }
     }
 

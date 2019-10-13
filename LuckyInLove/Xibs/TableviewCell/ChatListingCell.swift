@@ -20,7 +20,7 @@ class ChatListingCell: UITableViewCell {
     //Setting the message Last Message values and User info
     var MESSAGE: Conversation!{
         didSet{
-            imgProfile.downloadCachedImage(placeholder: "", urlString: MESSAGE.user.profilePic)
+            imgProfile.downloadCachedImage(placeholder: "user_avatar", urlString: MESSAGE.user.profilePic)
             lblName.text = MESSAGE.user.name
             lblConversation.text = MESSAGE.lastMessage.content as? String
            

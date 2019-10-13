@@ -11,14 +11,17 @@ import GrowingTextView
 
 class ChatControllerVC: UIViewController,UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource {
 
+    @IBOutlet weak var userNameLbl: UILabel!
     
     @IBOutlet weak var chatTextView: GrowingTextView!
     @IBOutlet weak var tableView: UITableView!
     var ReceiverID: String = ""
+    var username: String = ""
     private var items = [Message]()
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
+        fetchData()
         // Do any additional setup after loading the view.
     }
     
@@ -28,6 +31,7 @@ class ChatControllerVC: UIViewController,UITextFieldDelegate,UITableViewDelegate
     }
     
     private func configUI(){
+        userNameLbl.text = username
         tableView.register(UINib(nibName: "ChatCell", bundle: nil), forCellReuseIdentifier: "ChatCell")
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = UITableView.automaticDimension
@@ -100,11 +104,17 @@ class ChatControllerVC: UIViewController,UITextFieldDelegate,UITableViewDelegate
                 return
             }
             self.composeMessage(type: MessageType.text, content: message)
-            chatTextView.text = "Write Something..."
-            chatTextView.resignFirstResponder()
+            chatTextView.text = ""
+            //chatTextView.resignFirstResponder()
         }
        
     }
+    
+    @IBAction func clickBackBtn(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
     
 
     /*

@@ -105,20 +105,32 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRW-4b-taD">
-                                        <rect key="frame" x="10" y="17.5" width="45.5" height="25"/>
+                                        <rect key="frame" x="358.5" y="17.5" width="45.5" height="25"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHk-xS-6cp">
+                                        <rect key="frame" x="10" y="6" width="30" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="←">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clickBackBtn:" destination="BQa-n2-g5N" eventType="touchUpInside" id="Aq7-od-TDw"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="XHk-xS-6cp" firstAttribute="leading" secondItem="4C5-w9-zRu" secondAttribute="leading" constant="10" id="NoE-Hx-rfA"/>
+                                    <constraint firstItem="XHk-xS-6cp" firstAttribute="centerY" secondItem="gRW-4b-taD" secondAttribute="centerY" id="P5n-y7-vVO"/>
                                     <constraint firstItem="gRW-4b-taD" firstAttribute="centerY" secondItem="4C5-w9-zRu" secondAttribute="centerY" id="RP1-Hy-fSv"/>
                                     <constraint firstAttribute="height" constant="60" id="hOF-a1-mxJ"/>
-                                    <constraint firstItem="gRW-4b-taD" firstAttribute="leading" secondItem="4C5-w9-zRu" secondAttribute="leading" constant="10" id="wPJ-Zu-SoI"/>
+                                    <constraint firstAttribute="trailing" secondItem="gRW-4b-taD" secondAttribute="trailing" constant="10" id="kuL-Pl-4kT"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9j9-L3-bJM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9j9-L3-bJM">
                                 <rect key="frame" x="0.0" y="104" width="414" height="732"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -155,6 +167,9 @@
                                     <constraint firstAttribute="height" constant="60" id="Y0V-Lk-u2u"/>
                                 </constraints>
                                 <state key="normal" image="paperplane.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="sendMessage:" destination="BQa-n2-g5N" eventType="touchUpInside" id="0c3-iQ-zKt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -178,6 +193,7 @@
                     <connections>
                         <outlet property="chatTextView" destination="XTC-vx-nAx" id="pxO-e7-bQi"/>
                         <outlet property="tableView" destination="9j9-L3-bJM" id="agk-yc-CQb"/>
+                        <outlet property="userNameLbl" destination="gRW-4b-taD" id="nP8-Nn-KcS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cA0-Ww-0lL" userLabel="First Responder" sceneMemberID="firstResponder"/>
