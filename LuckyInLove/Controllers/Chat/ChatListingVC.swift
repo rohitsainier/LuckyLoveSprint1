@@ -12,10 +12,12 @@ class ChatListingVC: UIViewController {
 
     @IBOutlet weak var tblChatlisting: UITableView!
     @IBOutlet weak var btnChatMenu: UIButton!
+    private var items = [Conversation]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.configUI() 
+        self.configUI()
+        fetchMessages()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,7 +45,7 @@ extension ChatListingVC : UITableViewDelegate, UITableViewDataSource {
     //MARK:- TableView DataSource, Delegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -53,10 +55,43 @@ extension ChatListingVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tblChatlisting.dequeueReusableCell(withIdentifier: TableViewCellIdentifire.kChatListingCell, for: indexPath) as! ChatListingCell
+        cell.MESSAGE = items[indexPath.row]
+        cell.selectionStyle = .none
         
        
         return cell
         
     }
     
+    //Downloads conversations
+       func fetchMessages() {
+         
+           self.items.removeAll()
+           Conversation.showConversations { (conversations) in
+               self.items = conversations
+               self.items.sort{ $0.lastMessage.timestamp > $1.lastMessage.timestamp }
+               if self.items.count == 0{
+//                   DispatchQueue.main.async {
+//                       self.noMessageAvailable.isHidden = false
+//                   }
+               }
+               else{
+                   DispatchQueue.main.async {
+                       //self.noMessageAvailable.isHidden = true
+                       self.tblChatlisting.reloadData()
+                       for conversation in self.items {
+                           if conversation.lastMessage.isRead == false {
+                               //self.playSound()
+                               break
+                           }
+                       }
+                   }
+               }
+             
+           }
+           
+       }
+    
 }
+
+
