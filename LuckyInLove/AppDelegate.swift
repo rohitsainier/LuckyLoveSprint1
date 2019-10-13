@@ -61,7 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     private func SetDummyUSer(){
-        let dummyUser = DummyUser(id: UIDevice.current.identifierForVendor!.uuidString)
+        let dummyUser = DummyUser(id: "Dummy12345678")
         AppModel.shared.loggedInUser = dummyUser
     }
     

@@ -77,7 +77,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegat
 //            }
 //
 //        }
-        User.loginUser(email: "rohitsainier2@gmail.com", password: "12345678") { (loginHandler) in
+        User.loginUser(email: "Dummy@gmail.com", password: "12345678") { (loginHandler) in
             if loginHandler == nil{
                 AppDelegate().sharedDelegate().navigateToDashboard()
             }

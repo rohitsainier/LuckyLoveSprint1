@@ -17,7 +17,7 @@ class Message {
     var owner: MessageOwner
     var type: MessageType
     var content: Any
-    var timestamp: Int
+    var timestamp: Double
     var isRead: Bool
     var image: UIImage?
     private var toID: String?
@@ -44,7 +44,7 @@ class Message {
                             }
                             let content = receivedMessage["content"] as! String
                             let fromID = receivedMessage["fromID"] as! String
-                            let timestamp = receivedMessage["timestamp"] as! Int
+                            let timestamp = receivedMessage["timestamp"] as! Double
                             if fromID == currentUserID {
                                 let message = Message.init(type: type, content: content, owner: .receiver, timestamp: timestamp, isRead: true)
                                 completion(message)
@@ -59,18 +59,7 @@ class Message {
         }
     }
     
-    func downloadImage(indexpathRow: Int, completion: @escaping (Bool, Int) -> Swift.Void)  {
-        if self.type == .photo {
-            let imageLink = self.content as! String
-            let imageURL = URL.init(string: imageLink)
-            URLSession.shared.dataTask(with: imageURL!, completionHandler: { (data, response, error) in
-                if error == nil {
-                    self.image = UIImage.init(data: data!)
-                    completion(true, indexpathRow)
-                }
-            }).resume()
-        }
-    }
+    
     
     class func markMessagesRead(forUserID: String)  {
         if let currentUserID = AppModel.shared.loggedInUser?.id {
@@ -101,7 +90,7 @@ class Message {
                     for snap in snapshot.children {
                         let receivedMessage = (snap as! DataSnapshot).value as! [String: Any]
                         self.content = receivedMessage["content"]!
-                        self.timestamp = receivedMessage["timestamp"] as! Int
+                        self.timestamp = receivedMessage["timestamp"] as! Double
                         let messageType = receivedMessage["type"] as! String
                         let fromID = receivedMessage["fromID"] as! String
                         self.isRead = receivedMessage["isRead"] as! Bool
@@ -217,7 +206,7 @@ class Message {
     }
     
     //MARK: Inits
-    init(type: MessageType, content: Any, owner: MessageOwner, timestamp: Int, isRead: Bool) {
+    init(type: MessageType, content: Any, owner: MessageOwner, timestamp: Double, isRead: Bool) {
         self.type = type
         self.content = content
         self.owner = owner

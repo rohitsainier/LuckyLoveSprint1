@@ -8,8 +8,10 @@
 
 import UIKit
 
+
 class ChatListingVC: UIViewController {
 
+     
     @IBOutlet weak var tblChatlisting: UITableView!
     @IBOutlet weak var btnChatMenu: UIButton!
     private var items = [Conversation]()
@@ -32,9 +34,6 @@ class ChatListingVC: UIViewController {
     func tableviewConfig(){
         self.tblChatlisting.register(UINib(nibName: TableViewCellIdentifire.kChatListingCell, bundle: nil), forCellReuseIdentifier: TableViewCellIdentifire.kChatListingCell)
         self.tblChatlisting.separatorStyle = .none
-        self.tblChatlisting.delegate = self
-        self.tblChatlisting.dataSource = self
-        self.tblChatlisting.reloadData()
     }
 
     @IBAction func ChatMenuButtonAction(_ sender: Any) {
@@ -57,10 +56,14 @@ extension ChatListingVC : UITableViewDelegate, UITableViewDataSource {
         let cell = tblChatlisting.dequeueReusableCell(withIdentifier: TableViewCellIdentifire.kChatListingCell, for: indexPath) as! ChatListingCell
         cell.MESSAGE = items[indexPath.row]
         cell.selectionStyle = .none
-        
-       
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc: ChatControllerVC = STORYBOARD.CHAT.instantiateViewController(withIdentifier: "ChatControllerVC") as! ChatControllerVC
+        vc.ReceiverID = items[indexPath.row].user.id
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     //Downloads conversations

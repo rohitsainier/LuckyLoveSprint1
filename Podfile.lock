@@ -96,6 +96,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.3.1):
     - GoogleUtilities/Logger
+  - GrowingTextView (0.7.1)
   - GTMSessionFetcher/Core (1.2.2)
   - IQKeyboardManagerSwift (6.5.1)
   - Koloda (5.0):
@@ -126,6 +127,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Messaging
   - Firebase/Storage
+  - GrowingTextView
   - IQKeyboardManagerSwift
   - Koloda
   - KVNProgress
@@ -158,6 +160,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
+    - GrowingTextView
     - GTMSessionFetcher
     - IQKeyboardManagerSwift
     - Koloda
@@ -187,6 +190,7 @@ SPEC CHECKSUMS:
   GoogleDataTransport: f6fe28f43e3a300736854260961ad485b473edc5
   GoogleDataTransportCCTSupport: 862418a8cdda520c4dd4af83a756d04efe4a6990
   GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
+  GrowingTextView: 6dff7eedf2fc93f8378d20d456782afd0267b0cc
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
   IQKeyboardManagerSwift: 9ac7524fad9f9fe9a3b98c927e7772471ca546d2
   Koloda: 75302d21882cc3e274c1561b1155805ea5919dab
@@ -200,6 +204,6 @@ SPEC CHECKSUMS:
   SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
   Toaster: c1a81b376edcc2470157b4d1ee1e9341d3b96455
 
-PODFILE CHECKSUM: e12a6b0b5e914e5b61887fd573518455bbbb2e8a
+PODFILE CHECKSUM: 36047ceea6ddbe29f04341e05c0f3f1c63165fa7
 
 COCOAPODS: 1.8.3

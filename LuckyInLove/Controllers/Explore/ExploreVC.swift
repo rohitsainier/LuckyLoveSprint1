@@ -48,6 +48,11 @@ class ExploreVC: UIViewController {
     
     @IBAction func clickToRightSwipeBtn(_ sender: UIButton) {
         kolodaView.swipe(.right)
+//        Message.send(message: Message(type: .text, content: "First Message just for testing nothing else", owner: MessageOwner.sender, timestamp: Date().timeIntervalSince1970, isRead: false), toID: "D2C33526-7BF7-478B-85CF-A9BAE0251372") { (success) in
+//            if success{
+//                self.view.sainiShowToast(message: "Message sent successfully!")
+//            }
+//        }
     }
     
 }

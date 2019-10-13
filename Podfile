@@ -22,5 +22,6 @@ target 'LuckyInLove' do
   pod 'Firebase/Messaging'
   pod 'NVActivityIndicatorView'
   pod 'Toaster'
+  pod 'GrowingTextView'
 
 end

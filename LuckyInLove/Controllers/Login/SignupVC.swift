@@ -103,7 +103,7 @@ class SignupVC: UIViewController, UITextFieldDelegate,UIImagePickerControllerDel
 //            }
         //}
         
-        User.registerUser(withName: "Rohit Saini", email: "rohitsainier2@gmail.com", password: "12345678", profilePic: profilePic.image!, fcmToken: "not configured yet", notificationCount: 0, messageCount: 0, location: ["lat":0,"long":0]) { (loginHandler) in
+        User.registerUser(withName: "Dummy Saini", email: "Dummy@gmail.com", password: "12345678", profilePic: profilePic.image!, fcmToken: "not configured yet", notificationCount: 0, messageCount: 0, location: ["lat":0,"long":0]) { (loginHandler) in
             if loginHandler == nil{
                 self.view.sainiShowToast(message: "User Register Successfully")
             }
