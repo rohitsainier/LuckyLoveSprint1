@@ -1,6 +1,4 @@
-//
-//  CustomTabBarView.swift
-//  UrbanKiddie
+
 //
 //  Created by Rohit Saini on 10/08/18.
 //  Copyright © 2018 Appknit. All rights reserved.

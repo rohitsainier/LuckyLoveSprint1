@@ -53,10 +53,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         IQKeyboardManager.shared.enable = true
+        //Dummy
+        SetDummyUSer()
 
         return true
     }
     
+    
+    private func SetDummyUSer(){
+        let dummyUser = DummyUser(id: UIDevice.current.identifierForVendor!.uuidString)
+        AppModel.shared.loggedInUser = dummyUser
+    }
     
     // [START receive_message]
         func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {

@@ -191,3 +191,13 @@ let kgivenRatings = "givenRatings"
 let kreceivedRatings = "receivedRatings"
 let kGoogleDistanceKey = "AIzaSyCmrEHYH1sC21bjQlPsUQFNAOcRYB2aiI0"
 
+
+enum MessageOwner {
+    case sender
+    case receiver
+}
+enum MessageType {
+    case photo
+    case text
+    case location
+}

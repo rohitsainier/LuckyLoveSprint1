@@ -94,14 +94,23 @@ class SignupVC: UIViewController, UITextFieldDelegate,UIImagePickerControllerDel
 //            displayToast("Confirm Password is not same as password")
 //        }
 //        else{
-            let params: [String: Any] = ["fname":"Rohit","lname":"Saini","email":"rohitsainier@gmail.com","password":"12345678","gender":"male","gender_pref":"female","device":"ios","device_token":"12345678","profession":"IOS Developer","country":"India","max_age_pref":30,"min_age_pref":18,"max_dist_pref":50,"min_dist_pref":1,"about":"Hola amigos yo soy rohit saini"]
-            let imageData = compressImage(image: profilePic.image!)
-            GCD.USER.REGISTER.async {
-                APIManager.sharedInstance.I_AM_COOL(params: params, api: API.USER.Register, Loader: true, isMultipart: false) { (responseData) in
-                    print(responseData)
-                }
-            }
+//            let params: [String: Any] = ["fname":"Rohit","lname":"Saini","email":"rohitsainier@gmail.com","password":"12345678","gender":"male","gender_pref":"female","device":"ios","device_token":"12345678","profession":"IOS Developer","country":"India","max_age_pref":30,"min_age_pref":18,"max_dist_pref":50,"min_dist_pref":1,"about":"Hola amigos yo soy rohit saini"]
+//            let imageData = compressImage(image: profilePic.image!)
+//            GCD.USER.REGISTER.async {
+//                APIManager.sharedInstance.I_AM_COOL(params: params, api: API.USER.Register, Loader: true, isMultipart: false) { (responseData) in
+//                    print(responseData)
+//                }
+//            }
         //}
+        
+        User.registerUser(withName: "Rohit Saini", email: "rohitsainier2@gmail.com", password: "12345678", profilePic: profilePic.image!, fcmToken: "not configured yet", notificationCount: 0, messageCount: 0, location: ["lat":0,"long":0]) { (loginHandler) in
+            if loginHandler == nil{
+                self.view.sainiShowToast(message: "User Register Successfully")
+            }
+            else{
+                self.view.sainiShowToast(message: loginHandler!)
+            }
+        }
     }
     
     // MARK: - Upload Image

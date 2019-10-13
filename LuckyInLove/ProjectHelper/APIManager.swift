@@ -244,19 +244,26 @@ public class APIManager {
                                 completion(response.data)
                             }
                             if let message = result["message"] as? String{
-                                displayToast(message)
+                                DispatchQueue.main.async {
+                                    displayToast(message)
+                                }
+                                
                             }
                             return
                         }
                     }
                     if let message = result["message"] as? String{
-                        displayToast(message)
+                        DispatchQueue.main.async {
+                            displayToast(message)
+                        }
                         return
                     }
                 }
                 if let error = response.result.error
                 {
-                    displayToast(error.localizedDescription)
+                    DispatchQueue.main.async {
+                        displayToast(error.localizedDescription)
+                    }
                     return
                 }
                 displayToast("error")
