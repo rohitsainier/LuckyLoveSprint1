@@ -18,6 +18,11 @@ class ProfileVC: UIViewController {
         self.configUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        let tabBar : CustomTabBarController = self.tabBarController as! CustomTabBarController
+        tabBar.setTabBarHidden(tabBarHidden: false)
+    }
+    
     func configUI() {
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableView.automaticDimension

@@ -11,9 +11,6 @@
         <array key="SirichanaBold.ttf">
             <string>SirichanaW31-Bold</string>
         </array>
-        <array key="SirichanaRegular.ttf">
-            <string>SirichanaW31-Regular</string>
-        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -34,47 +31,39 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="b3S-w3-Oot">
                                         <rect key="frame" x="0.0" y="0.0" width="218" height="232"/>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pxJ-B6-9cE">
+                                        <rect key="frame" x="0.0" y="222" width="218" height="10"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="R2B-gY-hAg"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="pxJ-B6-9cE" firstAttribute="centerX" secondItem="b3S-w3-Oot" secondAttribute="centerX" id="4Ex-74-kmd"/>
                                     <constraint firstItem="b3S-w3-Oot" firstAttribute="top" secondItem="UxK-Wm-4zt" secondAttribute="top" id="54y-tx-Zqh"/>
                                     <constraint firstItem="b3S-w3-Oot" firstAttribute="leading" secondItem="UxK-Wm-4zt" secondAttribute="leading" id="DOp-aR-3p9"/>
                                     <constraint firstAttribute="bottom" secondItem="b3S-w3-Oot" secondAttribute="bottom" constant="3" id="DkD-PR-DBj"/>
                                     <constraint firstAttribute="trailing" secondItem="b3S-w3-Oot" secondAttribute="trailing" id="pKz-gr-rGI"/>
                                     <constraint firstAttribute="height" constant="235" id="pNb-KO-wbk"/>
+                                    <constraint firstItem="pxJ-B6-9cE" firstAttribute="width" secondItem="b3S-w3-Oot" secondAttribute="width" id="q7D-s8-XWe"/>
+                                    <constraint firstItem="pxJ-B6-9cE" firstAttribute="bottom" secondItem="b3S-w3-Oot" secondAttribute="bottom" id="sdt-ZS-2T1"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MHn-vL-wVc">
                                 <rect key="frame" x="0.0" y="235" width="218" height="73"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alisha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPo-tT-OgZ">
-                                        <rect key="frame" x="86.5" y="0.0" width="45.5" height="37"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@megonFox" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPo-tT-OgZ">
+                                        <rect key="frame" x="5" y="0.0" width="208" height="37"/>
                                         <fontDescription key="fontDescription" name="SirichanaW31-Bold" family="SirichanaW31-Bold" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="3Ag-Dj-xzB">
-                                        <rect key="frame" x="77.5" y="37" width="63" height="30"/>
-                                        <subviews>
-                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XX-C0-Y2z">
-                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active Now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4l-R4-IQi">
-                                                <rect key="frame" x="0.0" y="0.0" width="63" height="30"/>
-                                                <fontDescription key="fontDescription" name="SirichanaW31-Regular" family="SirichanaW31-Regular" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="yPo-tT-OgZ" firstAttribute="top" secondItem="MHn-vL-wVc" secondAttribute="top" id="bdO-sV-zyc"/>
-                                    <constraint firstItem="3Ag-Dj-xzB" firstAttribute="centerX" secondItem="yPo-tT-OgZ" secondAttribute="centerX" id="cMv-qh-Nff"/>
-                                    <constraint firstItem="yPo-tT-OgZ" firstAttribute="centerX" secondItem="MHn-vL-wVc" secondAttribute="centerX" id="dIn-Hr-ol1"/>
-                                    <constraint firstItem="3Ag-Dj-xzB" firstAttribute="top" secondItem="yPo-tT-OgZ" secondAttribute="bottom" id="tIc-JD-WJl"/>
+                                    <constraint firstItem="yPo-tT-OgZ" firstAttribute="leading" secondItem="MHn-vL-wVc" secondAttribute="leading" constant="5" id="8jS-Ic-7EQ"/>
+                                    <constraint firstItem="yPo-tT-OgZ" firstAttribute="top" secondItem="MHn-vL-wVc" secondAttribute="top" id="BGV-9J-Nig"/>
+                                    <constraint firstAttribute="trailing" secondItem="yPo-tT-OgZ" secondAttribute="trailing" constant="5" id="IHG-GK-lO2"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -90,7 +79,10 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
-                                <real key="value" value="20"/>
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.5"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
@@ -107,9 +99,7 @@
             <connections>
                 <outlet property="imgProfile" destination="b3S-w3-Oot" id="0aF-hw-wu1"/>
                 <outlet property="imgView" destination="UxK-Wm-4zt" id="Zi6-gs-hqw"/>
-                <outlet property="lblActiveStatus" destination="x4l-R4-IQi" id="gWK-j5-24C"/>
                 <outlet property="lblName" destination="yPo-tT-OgZ" id="waX-3B-NFs"/>
-                <outlet property="lblOnline" destination="0XX-C0-Y2z" id="lMY-Tb-3XE"/>
                 <outlet property="userInfoView" destination="MHn-vL-wVc" id="hzk-vq-9i5"/>
                 <outlet property="vwMain" destination="JaK-4Z-6xZ" id="cRO-ff-FHU"/>
             </connections>

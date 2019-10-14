@@ -26,6 +26,11 @@ class ExploreVC: UIViewController {
         self.configUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        let tabBar : CustomTabBarController = self.tabBarController as! CustomTabBarController
+        tabBar.setTabBarHidden(tabBarHidden: false)
+    }
+    
     func configUI() {
         kolodaView.dataSource = self
         kolodaView.delegate = self
@@ -157,7 +162,7 @@ extension ExploreVC: KolodaViewDataSource {
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
          let cardView = Bundle.main.loadNibNamed("SwipeCardView", owner: self, options: nil)![0] as! SwipeCardView
         cardView.profilePic.layer.cornerRadius = 20
-        cardView.percentageMatchView.layer.cornerRadius = cardView.percentageMatchView.frame.height / 2
+//        cardView.percentageMatchView.layer.cornerRadius = cardView.percentageMatchView.frame.height / 2
        return cardView
     }
 

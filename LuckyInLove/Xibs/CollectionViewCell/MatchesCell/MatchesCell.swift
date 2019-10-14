@@ -15,8 +15,7 @@ class MatchesCell: UICollectionViewCell {
     @IBOutlet weak var vwMain: UIView!
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var lblName: UILabel!
-    @IBOutlet weak var lblOnline: UILabel!
-    @IBOutlet weak var lblActiveStatus: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,8 +24,6 @@ class MatchesCell: UICollectionViewCell {
     }
 
     func configUI() { 
-        self.imgProfile.layer.cornerRadius = 20.0
-        self.lblOnline.layer.cornerRadius = self.lblOnline.frame.height / 2
-        self.lblOnline.backgroundColor = UIColor.green
+        self.imgProfile.layer.cornerRadius = 10.0
     }
 }

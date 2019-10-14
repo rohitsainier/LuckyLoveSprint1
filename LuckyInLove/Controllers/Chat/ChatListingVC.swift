@@ -24,6 +24,8 @@ class ChatListingVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        let tabBar : CustomTabBarController = self.tabBarController as! CustomTabBarController
+        tabBar.setTabBarHidden(tabBarHidden: false)
         self.tableviewConfig()
     }
     func configUI() {

@@ -17,19 +17,19 @@ class MatchesVC: UIViewController {
     //MARK:- View Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configUI()
+        
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        let tabBar : CustomTabBarController = self.tabBarController as! CustomTabBarController
+        tabBar.setTabBarHidden(tabBarHidden: false)
         self.configCollectionView()
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.title = "Matches"
-       
     }
-    func configUI() {
-    }
+    
     //Config Collectionview
     
     func configCollectionView() {
@@ -56,7 +56,7 @@ extension MatchesVC: UICollectionViewDataSource,UICollectionViewDelegate, UIColl
         return 10
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: ((matchesCollectionView.frame.size.width - 20) / 2), height: 318)
+        return CGSize(width: ((matchesCollectionView.frame.size.width - 60) / 2), height: 318)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -67,7 +67,7 @@ extension MatchesVC: UICollectionViewDataSource,UICollectionViewDelegate, UIColl
         return  10.0
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 15, left: 5, bottom: 15, right: 5)
+        return UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {

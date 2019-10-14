@@ -12,7 +12,7 @@ import UIKit
 
 
 struct API {
-    static var BASE_URL = "http://ec2-18-191-227-23.us-east-2.compute.amazonaws.com/luckyinlove/App/Api/"
+    static var BASE_URL = "http://ec2-18-191-227-23.us-east-2.compute.amazonaws.com/webserverluckyinlove/Api/"
    
     
     
