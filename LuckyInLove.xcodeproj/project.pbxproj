@@ -18,6 +18,8 @@
 		2219AA7E234FA37A00145EAB /* SirichanaBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2219AA7C234FA37A00145EAB /* SirichanaBold.ttf */; };
 		2219AA7F234FA37A00145EAB /* SirichanaRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2219AA7D234FA37A00145EAB /* SirichanaRegular.ttf */; };
 		2219AA81234FAF1500145EAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2219AA80234FAF1500145EAB /* GoogleService-Info.plist */; };
+		223806BF235650290034F55B /* SainiDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223806BE235650280034F55B /* SainiDatePicker.swift */; };
+		223806C123565AF30034F55B /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223806C023565AF30034F55B /* RegisterModel.swift */; };
 		223AA5FE2352540A00642FB4 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223AA5FD2352540A00642FB4 /* APIHelper.swift */; };
 		223AA600235255B500642FB4 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223AA5FF235255B500642FB4 /* APIManager.swift */; };
 		223AA6022352560E00642FB4 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223AA6012352560E00642FB4 /* AppModel.swift */; };
@@ -36,6 +38,7 @@
 		22C42DBC235336800094784E /* ChatControllerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C42DBB235336800094784E /* ChatControllerVC.swift */; };
 		22C42DBF23533B470094784E /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C42DBD23533B470094784E /* ChatCell.swift */; };
 		22C42DC023533B470094784E /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C42DBE23533B470094784E /* ChatCell.xib */; };
+		22E8444123564A800016383B /* CompleteSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E8444023564A800016383B /* CompleteSignUp.swift */; };
 		2F13EB0C2349B3E4004EC435 /* MatchesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13EB0B2349B3E4004EC435 /* MatchesVC.swift */; };
 		2F13EB122349B48F004EC435 /* MatchesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13EB102349B48F004EC435 /* MatchesCell.swift */; };
 		2F13EB132349B48F004EC435 /* MatchesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F13EB112349B48F004EC435 /* MatchesCell.xib */; };
@@ -75,6 +78,8 @@
 		2219AA7C234FA37A00145EAB /* SirichanaBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SirichanaBold.ttf; sourceTree = "<group>"; };
 		2219AA7D234FA37A00145EAB /* SirichanaRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SirichanaRegular.ttf; sourceTree = "<group>"; };
 		2219AA80234FAF1500145EAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		223806BE235650280034F55B /* SainiDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SainiDatePicker.swift; sourceTree = "<group>"; };
+		223806C023565AF30034F55B /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterModel.swift; path = LuckyInLove/Controllers/Login/RegisterModel.swift; sourceTree = SOURCE_ROOT; };
 		223AA5FD2352540A00642FB4 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		223AA5FF235255B500642FB4 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		223AA6012352560E00642FB4 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
@@ -93,6 +98,7 @@
 		22C42DBB235336800094784E /* ChatControllerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatControllerVC.swift; sourceTree = "<group>"; };
 		22C42DBD23533B470094784E /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		22C42DBE23533B470094784E /* ChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
+		22E8444023564A800016383B /* CompleteSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUp.swift; sourceTree = "<group>"; };
 		2E3669C55EF6CA81D69AD42F /* Pods_LuckyInLove.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuckyInLove.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F13EB0B2349B3E4004EC435 /* MatchesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesVC.swift; sourceTree = "<group>"; };
 		2F13EB102349B48F004EC435 /* MatchesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCell.swift; sourceTree = "<group>"; };
@@ -161,6 +167,7 @@
 				223AA5FF235255B500642FB4 /* APIManager.swift */,
 				223AA6012352560E00642FB4 /* AppModel.swift */,
 				223AA6032352568000642FB4 /* Utility.swift */,
+				223806BE235650280034F55B /* SainiDatePicker.swift */,
 			);
 			path = ProjectHelper;
 			sourceTree = "<group>";
@@ -285,6 +292,7 @@
 				22C42DB5235323760094784E /* User.swift */,
 				22C42DB7235324830094784E /* Conversation.swift */,
 				22C42DB9235325330094784E /* Messages.swift */,
+				223806C023565AF30034F55B /* RegisterModel.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -345,6 +353,7 @@
 			children = (
 				2F7FBE452348CA7900659F1A /* LoginVC.swift */,
 				2F7FBE6723490CBA00659F1A /* SignupVC.swift */,
+				22E8444023564A800016383B /* CompleteSignUp.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -533,6 +542,7 @@
 				22C42DB8235324830094784E /* Conversation.swift in Sources */,
 				220BF353234E537E0021BFAF /* CustomTabBarView.swift in Sources */,
 				22C42DB6235323760094784E /* User.swift in Sources */,
+				223806BF235650290034F55B /* SainiDatePicker.swift in Sources */,
 				223AA5FE2352540A00642FB4 /* APIHelper.swift in Sources */,
 				2F7FBE632349080A00659F1A /* DataModel.swift in Sources */,
 				22C42DBC235336800094784E /* ChatControllerVC.swift in Sources */,
@@ -554,7 +564,9 @@
 				220820F22352F9CA00693030 /* LoginModel.swift in Sources */,
 				2F13EB172349C46E004EC435 /* ChatListingVC.swift in Sources */,
 				2F7FBE702349152E00659F1A /* Font+Addition.swift in Sources */,
+				223806C123565AF30034F55B /* RegisterModel.swift in Sources */,
 				2F7FBE6D234914DE00659F1A /* BaseView.swift in Sources */,
+				22E8444123564A800016383B /* CompleteSignUp.swift in Sources */,
 				223AA60B2352675700642FB4 /* GridCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

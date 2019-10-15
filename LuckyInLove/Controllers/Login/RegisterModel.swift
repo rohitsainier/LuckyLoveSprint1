@@ -1,64 +1,49 @@
 //
-//  LoginModel.swift
+//  RegisterModel.swift
 //  LuckyInLove
 //
-//  Created by Rohit Saini on 13/10/19.
+//  Created by Rohit Saini on 16/10/19.
 //  Copyright © 2019 Ruchit. All rights reserved.
 //
 
-
-// MARK: - LoginModel
-struct LoginModel: Codable {
+import Foundation
+// MARK: - RegisterModel
+struct RegisterModel: Codable {
     let error: Bool
     let message: String
-    let loginUserDetails: LoginUserDetails?
-    let userGallary: UserGallary?
-    
-
-    enum CodingKeys: String, CodingKey {
-        case error, message, loginUserDetails
-        case userGallary = "user_gallary"
-    }
+    let body: Body?
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         error = try values.decodeIfPresent(Bool.self, forKey: .error) ?? false
         message  = try values.decodeIfPresent(String.self, forKey: .message) ?? ""
-        loginUserDetails = try values.decodeIfPresent(LoginUserDetails.self, forKey: .loginUserDetails) ?? nil
-        userGallary = try values.decodeIfPresent(UserGallary.self, forKey: .userGallary) ?? nil
+        body = try values.decodeIfPresent(Body.self, forKey: .body) ?? nil
        
     }
-    
-    
-    
 }
 
-// MARK: - LoginUserDetails
-struct LoginUserDetails: Codable {
-    let id, fname, lname: String
-    let username: String
-    let email, password: String
-    let profileImage: String
-    let age, about: String
-    let gender, profession: String
-    let country, locationLat, locationLong: String
+// MARK: - Body
+struct Body: Codable {
+    let id, fname, lname, username: String
+    let email, password, profileImage, age: String
+    let about, gender, profession, country: String
     let genderPref, maxAgePref, minAgePref, maxDistPref: String
-    let minDistPref: String
-    let authToken: String
+    let minDistPref, locationLat, locationLong, authToken: String
 
     enum CodingKeys: String, CodingKey {
         case id, fname, lname, username, email, password
         case profileImage = "profile_image"
         case age, about, gender, profession, country
-        case locationLat = "location_lat"
-        case locationLong = "location_long"
         case genderPref = "gender_pref"
         case maxAgePref = "max_age_pref"
         case minAgePref = "min_age_pref"
         case maxDistPref = "max_dist_pref"
         case minDistPref = "min_dist_pref"
+        case locationLat = "location_lat"
+        case locationLong = "location_long"
         case authToken = "AuthToken"
     }
+    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decodeIfPresent(String.self, forKey: .id) ?? ""
@@ -83,9 +68,5 @@ struct LoginUserDetails: Codable {
         locationLong = try values.decodeIfPresent(String.self, forKey: .locationLong) ?? ""
         authToken = try values.decodeIfPresent(String.self, forKey: .authToken) ?? ""
     }
-}
-
-// MARK: - UserGallary
-struct UserGallary: Codable {
-    let img1: String
+    
 }

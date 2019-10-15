@@ -113,6 +113,7 @@ PODS:
   - NVActivityIndicatorView/Presenter (4.8.0)
   - pop (1.0.12)
   - Protobuf (3.10.0)
+  - RangeSeekSlider (1.8.0)
   - SDWebImage (4.4.7):
     - SDWebImage/Core (= 4.4.7)
   - SDWebImage/Core (4.4.7)
@@ -132,6 +133,7 @@ DEPENDENCIES:
   - Koloda
   - KVNProgress
   - NVActivityIndicatorView
+  - RangeSeekSlider
   - SDWebImage (~> 4.0)
   - SkyFloatingLabelTextField (~> 3.0)
   - Toaster
@@ -169,6 +171,7 @@ SPEC REPOS:
     - NVActivityIndicatorView
     - pop
     - Protobuf
+    - RangeSeekSlider
     - Toaster
 
 SPEC CHECKSUMS:
@@ -200,10 +203,11 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
+  RangeSeekSlider: 650b11fa1edcb92e1e0ede797669d98622570fb5
   SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
   SkyFloatingLabelTextField: 4b46db0ab1ccde0919cded29c656e6b4805eda04
   Toaster: c1a81b376edcc2470157b4d1ee1e9341d3b96455
 
-PODFILE CHECKSUM: 36047ceea6ddbe29f04341e05c0f3f1c63165fa7
+PODFILE CHECKSUM: 90c93f22f1101f404aa11713bbc9505aca2e8ec1
 
 COCOAPODS: 1.8.3

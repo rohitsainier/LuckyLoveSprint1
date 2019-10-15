@@ -23,5 +23,6 @@ target 'LuckyInLove' do
   pod 'NVActivityIndicatorView'
   pod 'Toaster'
   pod 'GrowingTextView'
+  pod 'RangeSeekSlider'
 
 end

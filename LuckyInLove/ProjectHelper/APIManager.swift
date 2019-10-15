@@ -215,13 +215,13 @@ public class APIManager {
         }
         else{
              headerParams  = getJsonHeaderWithToken()
-             Params = params
+            Params = params
         }
         print(headerParams)
         print(Params)
         print(api)
 
-        Alamofire.request(api, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headerParams).responseJSON { (response) in
+        Alamofire.request(api, method: .post, parameters: params).responseJSON { (response) in
 
             DispatchQueue.main.async {
                 removeLoader()
@@ -231,8 +231,8 @@ public class APIManager {
             case .success:
                 print(response.result.value ?? "No data availabe")
                 if let result = response.result.value as? [String:Any]{
-                    if let code = result["code"] as? Int{
-                        if(code == 100){
+                    if let success = result["error"] as? Bool{
+                        if success{
 
                             DispatchQueue.main.async {
                                 completion(response.data)

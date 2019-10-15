@@ -8,6 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="GOTHIC.TTF">
+            <string>CenturyGothic</string>
+        </array>
         <array key="Muli-Regular.ttf">
             <string>Muli-Regular</string>
         </array>
@@ -210,7 +213,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vcy-XS-98c" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                                 <rect key="frame" x="0.0" y="65" width="240" height="50"/>
                                                 <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="selectedLineColor">
                                                         <color key="value" red="0.87843137250000003" green="0.1333333333" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -249,7 +252,7 @@
                                             <constraint firstAttribute="height" constant="40" id="0vb-s5-fYn"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
-                                        <state key="normal" title="SIGN UP">
+                                        <state key="normal" title="NEXT">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -336,6 +339,310 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fjq-HD-35e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-199" y="746"/>
+        </scene>
+        <!--Complete Sign Up-->
+        <scene sceneID="rQY-Y9-a0F">
+            <objects>
+                <viewController storyboardIdentifier="CompleteSignUp" id="awo-My-XQC" customClass="CompleteSignUp" customModule="LuckyInLove" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LOJ-Qc-aOc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hP4-kG-B6e" customClass="View_Addition" customModule="LuckyInLove" customModuleProvider="target">
+                                <rect key="frame" x="20" y="34" width="280" height="500"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCF-NX-OfT">
+                                        <rect key="frame" x="10" y="20" width="56.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PId-H9-n4p">
+                                        <rect key="frame" x="108" y="15.5" width="162" height="29"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="686-u4-bVG">
+                                                <rect key="frame" x="0.0" y="0.0" width="54" height="29"/>
+                                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                                                <state key="normal" title="Male">
+                                                    <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="genderMaleBtnIsPressed:" destination="awo-My-XQC" eventType="touchUpInside" id="fOW-KV-lUX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9w-ho-kga">
+                                                <rect key="frame" x="54" y="0.0" width="54" height="29"/>
+                                                <color key="backgroundColor" red="0.87843137250000003" green="0.1333333333" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                                                <state key="normal" title=" Female ">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="genderFemaleBtnIsPressed:" destination="awo-My-XQC" eventType="touchUpInside" id="SC2-Ek-0Lb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVl-V4-VaK">
+                                                <rect key="frame" x="108" y="0.0" width="54" height="29"/>
+                                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                                                <state key="normal" title="Other">
+                                                    <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="genderOtherBtnIsPressed:" destination="awo-My-XQC" eventType="touchUpInside" id="WBq-2v-W7S"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aF4-4q-MLe">
+                                        <rect key="frame" x="10" y="60" width="37" height="20"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DDMMYYYY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9i-te-kYs">
+                                        <rect key="frame" x="172" y="60" width="98" height="20"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                        <color key="textColor" red="0.67450980390000004" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interested in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5q4-of-UqN">
+                                        <rect key="frame" x="10" y="100" width="94" height="20"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9ck-JH-MZJ">
+                                        <rect key="frame" x="10" y="130" width="162" height="29"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9m-lY-0ZP">
+                                                <rect key="frame" x="0.0" y="0.0" width="54" height="29"/>
+                                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                                                <state key="normal" title="Male">
+                                                    <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="interMaleBtnIsPressed:" destination="awo-My-XQC" eventType="touchUpInside" id="fvw-E7-W0m"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXa-Ol-gqY">
+                                                <rect key="frame" x="54" y="0.0" width="54" height="29"/>
+                                                <color key="backgroundColor" red="0.87843137250000003" green="0.1333333333" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                                                <state key="normal" title=" Female ">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="interFemaleBtnIsPressed:" destination="awo-My-XQC" eventType="touchUpInside" id="Jod-yI-5mo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydP-hQ-BW2">
+                                                <rect key="frame" x="108" y="0.0" width="54" height="29"/>
+                                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                                                <state key="normal" title="Other">
+                                                    <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="interOtherBtnIsPressed:" destination="awo-My-XQC" eventType="touchUpInside" id="6Zh-O8-Gcm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age range preference" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEx-wM-2eG">
+                                        <rect key="frame" x="10" y="179" width="163.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cey-zX-5fb" customClass="RangeSeekSlider" customModule="RangeSeekSlider">
+                                        <rect key="frame" x="10" y="209" width="250" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.87843137250000003" green="0.1333333333" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="SPI-QM-4CE"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                                <real key="value" value="60"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedMinValue">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedMaxValue">
+                                                <real key="value" value="35"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minDistance">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="minLabelColor">
+                                                <color key="value" red="0.37254901959999998" green="0.37254901959999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="maxLabelColor">
+                                                <color key="value" red="0.37254901959999998" green="0.37254901959999998" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="handleColor">
+                                                <color key="value" red="0.87843137250000003" green="0.1333333333" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="colorBetweenHandles">
+                                                <color key="value" red="0.87843137250000003" green="0.1333333333" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxDistance">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="labelPadding">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="handleDiameter">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance range preference" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POW-fE-mgP">
+                                        <rect key="frame" x="10" y="259" width="200" height="20"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMa-83-YaF" customClass="RangeSeekSlider" customModule="RangeSeekSlider">
+                                        <rect key="frame" x="10" y="289" width="250" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.87843137250000003" green="0.1333333333" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="jTF-g8-lYl"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                                <real key="value" value="60"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedMinValue">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="selectedMaxValue">
+                                                <real key="value" value="35"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minDistance">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="minLabelColor">
+                                                <color key="value" red="0.37254901959999998" green="0.37254901959999998" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="maxLabelColor">
+                                                <color key="value" red="0.37254901959999998" green="0.37254901959999998" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="handleColor">
+                                                <color key="value" red="0.87843137250000003" green="0.1333333333" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="colorBetweenHandles">
+                                                <color key="value" red="0.87843137250000003" green="0.1333333333" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxDistance">
+                                                <real key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="labelPadding">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="handleDiameter">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHf-Jo-I1k">
+                                        <rect key="frame" x="10" y="339" width="46" height="20"/>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iHX-Fa-I1L">
+                                        <rect key="frame" x="10" y="369" width="250" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="2wx-DS-cEH"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gp6-DU-U72">
+                                        <rect key="frame" x="10" y="439" width="250" height="40"/>
+                                        <color key="backgroundColor" red="0.88079756499999995" green="0.21716246010000001" blue="0.32303440570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="lC9-9G-z0k"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="16"/>
+                                        <state key="normal" title="SIGN UP">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clickSignUpBtn:" destination="awo-My-XQC" eventType="touchUpInside" id="HcO-eV-Awe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="POW-fE-mgP" firstAttribute="leading" secondItem="Cey-zX-5fb" secondAttribute="leading" id="0f7-8t-HQt"/>
+                                    <constraint firstItem="GCF-NX-OfT" firstAttribute="top" secondItem="hP4-kG-B6e" secondAttribute="top" constant="20" id="53B-iS-Bjs"/>
+                                    <constraint firstItem="Cey-zX-5fb" firstAttribute="top" secondItem="oEx-wM-2eG" secondAttribute="bottom" constant="10" id="6pZ-hE-zmY"/>
+                                    <constraint firstItem="9ck-JH-MZJ" firstAttribute="top" secondItem="5q4-of-UqN" secondAttribute="bottom" constant="10" id="AjB-as-wZ5"/>
+                                    <constraint firstItem="POW-fE-mgP" firstAttribute="top" secondItem="Cey-zX-5fb" secondAttribute="bottom" constant="20" id="CLF-8o-4ck"/>
+                                    <constraint firstItem="Gp6-DU-U72" firstAttribute="leading" secondItem="iHX-Fa-I1L" secondAttribute="leading" id="DTW-6O-zz6"/>
+                                    <constraint firstAttribute="trailing" secondItem="PId-H9-n4p" secondAttribute="trailing" constant="10" id="IX3-mK-Q3A"/>
+                                    <constraint firstAttribute="height" constant="500" id="K2M-r6-mHO"/>
+                                    <constraint firstItem="5q4-of-UqN" firstAttribute="top" secondItem="aF4-4q-MLe" secondAttribute="bottom" constant="20" id="KZw-pB-j6Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="H9i-te-kYs" secondAttribute="trailing" constant="10" id="Knq-yd-9Io"/>
+                                    <constraint firstItem="Cey-zX-5fb" firstAttribute="leading" secondItem="oEx-wM-2eG" secondAttribute="leading" id="MA5-eA-yUf"/>
+                                    <constraint firstItem="5q4-of-UqN" firstAttribute="leading" secondItem="aF4-4q-MLe" secondAttribute="leading" id="Qxs-O6-aeF"/>
+                                    <constraint firstItem="Gp6-DU-U72" firstAttribute="trailing" secondItem="iHX-Fa-I1L" secondAttribute="trailing" id="UfN-mG-ISf"/>
+                                    <constraint firstItem="XMa-83-YaF" firstAttribute="leading" secondItem="POW-fE-mgP" secondAttribute="leading" id="VIq-H0-BKD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cey-zX-5fb" secondAttribute="trailing" constant="20" id="VRc-aU-CCu"/>
+                                    <constraint firstItem="iHX-Fa-I1L" firstAttribute="leading" secondItem="YHf-Jo-I1k" secondAttribute="leading" id="VTi-jK-RRv"/>
+                                    <constraint firstItem="PId-H9-n4p" firstAttribute="centerY" secondItem="GCF-NX-OfT" secondAttribute="centerY" id="Zns-3k-U8C"/>
+                                    <constraint firstItem="Gp6-DU-U72" firstAttribute="top" secondItem="iHX-Fa-I1L" secondAttribute="bottom" constant="20" id="aie-IY-AJV"/>
+                                    <constraint firstItem="9ck-JH-MZJ" firstAttribute="leading" secondItem="5q4-of-UqN" secondAttribute="leading" id="ate-Iv-MNg"/>
+                                    <constraint firstItem="XMa-83-YaF" firstAttribute="top" secondItem="POW-fE-mgP" secondAttribute="bottom" constant="10" id="bKJ-hE-mNv"/>
+                                    <constraint firstItem="iHX-Fa-I1L" firstAttribute="top" secondItem="YHf-Jo-I1k" secondAttribute="bottom" constant="10" id="eH3-n1-RWO"/>
+                                    <constraint firstItem="H9i-te-kYs" firstAttribute="centerY" secondItem="aF4-4q-MLe" secondAttribute="centerY" id="esG-Pc-Mod"/>
+                                    <constraint firstItem="oEx-wM-2eG" firstAttribute="top" secondItem="9ck-JH-MZJ" secondAttribute="bottom" constant="20" id="gRk-tN-f15"/>
+                                    <constraint firstItem="aF4-4q-MLe" firstAttribute="leading" secondItem="GCF-NX-OfT" secondAttribute="leading" id="jim-JE-88o"/>
+                                    <constraint firstAttribute="trailing" secondItem="XMa-83-YaF" secondAttribute="trailing" constant="20" id="o9e-zh-HZx"/>
+                                    <constraint firstItem="aF4-4q-MLe" firstAttribute="top" secondItem="GCF-NX-OfT" secondAttribute="bottom" constant="20" id="pZo-MC-Ims"/>
+                                    <constraint firstItem="GCF-NX-OfT" firstAttribute="leading" secondItem="hP4-kG-B6e" secondAttribute="leading" constant="10" id="qBG-RJ-3By"/>
+                                    <constraint firstAttribute="trailing" secondItem="iHX-Fa-I1L" secondAttribute="trailing" constant="20" id="xbZ-Ra-GtT"/>
+                                    <constraint firstItem="oEx-wM-2eG" firstAttribute="leading" secondItem="V9m-lY-0ZP" secondAttribute="leading" id="yk1-NZ-rs0"/>
+                                    <constraint firstItem="YHf-Jo-I1k" firstAttribute="top" secondItem="XMa-83-YaF" secondAttribute="bottom" constant="20" id="zE6-Qc-IVL"/>
+                                    <constraint firstItem="YHf-Jo-I1k" firstAttribute="leading" secondItem="XMa-83-YaF" secondAttribute="leading" id="zjT-Rv-28M"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="g4D-ZT-DEJ" firstAttribute="trailing" secondItem="hP4-kG-B6e" secondAttribute="trailing" constant="20" id="PaW-Vp-5ve"/>
+                            <constraint firstItem="hP4-kG-B6e" firstAttribute="leading" secondItem="g4D-ZT-DEJ" secondAttribute="leading" constant="20" id="hFu-GA-kfC"/>
+                            <constraint firstItem="hP4-kG-B6e" firstAttribute="centerY" secondItem="g4D-ZT-DEJ" secondAttribute="centerY" id="jdJ-Ue-ePp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g4D-ZT-DEJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="DOBLbl" destination="H9i-te-kYs" id="oxl-QM-V3y"/>
+                        <outlet property="aboutTxt" destination="iHX-Fa-I1L" id="NLL-re-trL"/>
+                        <outlet property="ageRangeSlider" destination="Cey-zX-5fb" id="kHd-aH-AtW"/>
+                        <outlet property="distanceRangeSlider" destination="XMa-83-YaF" id="omW-Tw-WeL"/>
+                        <outlet property="genderFemaleBtn" destination="Z9w-ho-kga" id="wo1-Np-AgX"/>
+                        <outlet property="genderMaleBtn" destination="686-u4-bVG" id="OOV-Ld-KsX"/>
+                        <outlet property="genderOtherBtn" destination="mVl-V4-VaK" id="AnF-BJ-mds"/>
+                        <outlet property="interestedFemaleBtn" destination="OXa-Ol-gqY" id="9Jj-HZ-u2a"/>
+                        <outlet property="interestedMaleBtn" destination="V9m-lY-0ZP" id="Ax5-li-WWM"/>
+                        <outlet property="interestedOtherBtn" destination="ydP-hQ-BW2" id="ymd-NV-7Gt"/>
+                        <outlet property="signUpBtn" destination="Gp6-DU-U72" id="k3m-D6-0cI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="etP-xY-0gO" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1548.75" y="745.77464788732391"/>
         </scene>
     </scenes>
     <resources>
