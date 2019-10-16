@@ -95,6 +95,7 @@ class SignupVC: UIViewController, UITextFieldDelegate,UIImagePickerControllerDel
             vc.lastname = lastname
             vc.email = email
             vc.password = password
+            vc.profilePic =  profilePic.image ?? UIImage()
             self.navigationController?.pushViewController(vc, animated: true)
         }
         

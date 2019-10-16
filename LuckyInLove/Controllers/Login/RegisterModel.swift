@@ -70,3 +70,28 @@ struct Body: Codable {
     }
     
 }
+
+
+// MARK: - UploadPictureModel
+struct UploadPictureModel: Codable {
+    let gallary: Gallary?
+    let error: Bool
+    let message: String
+    
+    init(from decoder: Decoder) throws {
+           let values = try decoder.container(keyedBy: CodingKeys.self)
+           gallary = try values.decodeIfPresent(Gallary.self, forKey: .gallary) ?? nil
+           error  = try values.decodeIfPresent(Bool.self, forKey: .error) ?? false
+           message  = try values.decodeIfPresent(String.self, forKey: .message) ?? ""
+           
+    }
+}
+
+// MARK: - Gallary
+struct Gallary: Codable {
+    let img1: String
+    init(from decoder: Decoder) throws {
+           let values = try decoder.container(keyedBy: CodingKeys.self)
+           img1 = try values.decodeIfPresent(String.self, forKey: .img1) ?? ""
+    }
+}

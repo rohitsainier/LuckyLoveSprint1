@@ -40,6 +40,7 @@ class CompleteSignUp: UIViewController {
     var lastname = ""
     var email = ""
     var password = ""
+    var profilePic: UIImage = UIImage()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -206,13 +207,13 @@ class CompleteSignUp: UIViewController {
         "country": "India",
         "location_lat": 72]
         GCD.USER.REGISTER.async {
-            APIManager.sharedInstance.I_AM_COOL(params: params, api: API.USER.Register, Loader: true, isMultipart: false) { (responseData) in
+            APIManager.sharedInstance.I_AM_COOL(params: params, api: API.USER.Register, Loader: true, isMultipart: false) { [unowned self](responseData) in
                 if responseData != nil{                             //if response is not empty
                     do {
                         let success = try JSONDecoder().decode(RegisterModel.self, from: responseData!) // decode the response into SignUpModel
                         switch success.error{
                         case false:
-                            AppDelegate().sharedDelegate().navigateToDashboard()
+                            self.uploadRegisterUserProfilePic(id: success.body?.id ?? "", AuthToken: success.body?.authToken ?? "", pic: self.profilePic)
                         default:
                             print("Error in register the user")
                         }
@@ -224,17 +225,49 @@ class CompleteSignUp: UIViewController {
             }
         }
         
-        //
         
-        //        User.registerUser(withName: "Dummy Saini", email: "Dummy@gmail.com", password: "12345678", profilePic: profilePic.image!, fcmToken: "not configured yet", notificationCount: 0, messageCount: 0, location: ["lat":0,"long":0]) { (loginHandler) in
-        //            if loginHandler == nil{
-        //                self.view.sainiShowToast(message: "User Register Successfully")
-        //            }
-        //            else{
-        //                self.view.sainiShowToast(message: loginHandler!)
-        //            }
-        //        }
+        
+      
 
+    }
+    
+    private func uploadRegisterUserProfilePic(id: String,AuthToken: String,pic: UIImage){
+        let params: [String: Any] = ["id":id,"AuthToken":AuthToken]
+        GCD.USER.UPLOAD_PICTURE.async {
+            APIManager.sharedInstance.MULTIPART_IS_COOL(compressImage(image: self.profilePic), param: params, api: API.USER.UploadPicture, login: true) { (responseData) in
+                if responseData != nil{                             //if response is not empty
+                    do {
+                        let success = try JSONDecoder().decode(UploadPictureModel.self, from: responseData!) // decode the response into SignUpModel
+                        switch success.error{
+                        case false:
+                            self.registerFirebaseUser()
+                        default:
+                            print("Error in register the user")
+                        }
+                    }
+                    catch let err {
+                        print("Err", err)
+                    }
+                }
+            }
+        }
+    }
+    
+    private func registerFirebaseUser(){
+        User.registerUser(withName: firstname + lastname, email: email, password: password, profilePic: profilePic, fcmToken: "not configured yet", notificationCount: 0, messageCount: 0, location: ["lat":0,"long":0]) { (loginHandler) in
+            if loginHandler == nil{
+                displayToast("A verification link has been sent to your registered email id please verify to Login")
+                for controller in self.navigationController!.viewControllers as Array {
+                    if controller.isKind(of: LoginVC.self) {
+                        self.navigationController!.popToViewController(controller, animated: true)
+                        break
+                    }
+                }
+            }
+            else{
+                displayToast(loginHandler!)
+            }
+        }
     }
     
     /*

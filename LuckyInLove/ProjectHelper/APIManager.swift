@@ -122,8 +122,9 @@ public class APIManager {
             headerParams = getMultipartHeader()
         }
         var params :[String : Any] = [String : Any] ()
+        params = param
 
-        params["data"] = toJson(param) //Converting Array into JSON Object
+        //params["data"] = toJson(param) //Converting Array into JSON Object
         print(params)
 
         Alamofire.upload(multipartFormData: { (multipartFormData) in
@@ -132,10 +133,9 @@ public class APIManager {
             }
             if imageData.count != 0
             {
-                multipartFormData.append(imageData, withName: "image", fileName: getCurrentTimeStampValue() + ".png", mimeType: "image/png")
+                multipartFormData.append(imageData, withName: "img1", fileName: getCurrentTimeStampValue() + ".jpg", mimeType: "image/jpg")
             }
-        }, usingThreshold: UInt64.init(), to: api, method: .post
-        , headers: headerParams) { (result) in
+        }, usingThreshold: UInt64.init(), to: api, method: .post) { (result) in
             switch result{
             case .success(let upload, _, _):
 
@@ -150,8 +150,8 @@ public class APIManager {
 
                     print(response.result.value!)
                     if let result = response.result.value as? [String:Any]{
-                        if let code = result["code"] as? Int{
-                            if(code == 100){
+                        if let success = result["error"] as? Bool{
+                            if success{
 
                                 DispatchQueue.main.async {
                                     completion(response.data)

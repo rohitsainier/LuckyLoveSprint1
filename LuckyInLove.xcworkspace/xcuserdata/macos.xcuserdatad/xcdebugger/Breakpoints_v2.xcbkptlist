@@ -55,48 +55,128 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EDD65BB7-1740-4168-B468-33DA13C35E8E"
+            uuid = "15A42E8A-442B-466F-B5A9-F38B7680DBBB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LuckyInLove/Controllers/Login/LoginVC.swift"
+            filePath = "LuckyInLove/Controllers/Login/CompleteSignUp.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "LoginButtonAction(_:)"
+            startingLineNumber = "243"
+            endingLineNumber = "243"
+            landmarkName = "uploadRegisterUserProfilePic(id:AuthToken:pic:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "657B7F97-6DD0-464E-BC86-9AA925DDDA4D"
+            uuid = "7B7E5533-52AF-456C-B9CF-62D2F2D8DF78"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LuckyInLove/Controllers/Login/CompleteSignUp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "uploadRegisterUserProfilePic(id:AuthToken:pic:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EC04B203-96EB-4D78-AAF4-1BD0B024BAD1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LuckyInLove/Controllers/Login/CompleteSignUp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
+            landmarkName = "registerFirebaseUser()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EC04B203-96EB-4D78-AAF4-1BD0B024BAD1 - 12c8442ca460325c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LuckyInLove.CompleteSignUp.(registerFirebaseUser in _50CB07E26CD4B4DE1F6B398406080E5B)() -&gt; ()"
+                  moduleName = "LuckyInLove"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macos/Desktop/LuckyLoveSprint1/LuckyInLove/Controllers/Login/CompleteSignUp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "257"
+                  endingLineNumber = "257"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "EC04B203-96EB-4D78-AAF4-1BD0B024BAD1 - c6c050e737ad749c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;) -&gt; () in LuckyInLove.CompleteSignUp.(registerFirebaseUser in _50CB07E26CD4B4DE1F6B398406080E5B)() -&gt; ()"
+                  moduleName = "LuckyInLove"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macos/Desktop/LuckyLoveSprint1/LuckyInLove/Controllers/Login/CompleteSignUp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "258"
+                  endingLineNumber = "258"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2699CD63-530D-4F16-B75B-B57A37A59A15"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LuckyInLove/ProjectHelper/APIManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "232"
-            endingLineNumber = "232"
-            landmarkName = "I_AM_COOL(params:api:Loader:isMultipart:_:)"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "MULTIPART_IS_COOL(_:param:api:login:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B6A01850-6F12-44D1-BA9F-0AC4397FF5AE"
+            uuid = "DBFC5885-790B-4500-A84C-2614BB144F1C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LuckyInLove/Controllers/Login/LoginVC.swift"
+            filePath = "LuckyInLove/ProjectHelper/APIManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "LoginButtonAction(_:)"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "MULTIPART_IS_COOL(_:param:api:login:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7F2935DD-75C9-43C4-BF63-F6A5110DBD98"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LuckyInLove/Xibs/TableviewCell/User.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "267"
+            endingLineNumber = "267"
+            landmarkName = "loginUser(email:password:loginHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

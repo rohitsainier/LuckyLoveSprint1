@@ -23,6 +23,7 @@ struct API {
         static let Register = BASE_URL + "register"
         static let UserListing = BASE_URL + "getUsers"
         static let UserDetails = BASE_URL + "getSingleUserData"
+        static let UploadPicture = BASE_URL + "edit_gallery_images"
     }
     
     
@@ -34,10 +35,11 @@ struct GCD{
     struct USER {
         static let LOGIN = DispatchQueue(label: "com.app.LOGIN", qos: DispatchQoS.userInteractive, attributes: DispatchQueue.Attributes.concurrent)//1
         
-        static let REGISTER = DispatchQueue(label: "com.app.REGISTER", qos: DispatchQoS.background, attributes: DispatchQueue.Attributes.concurrent)//2
+        static let REGISTER = DispatchQueue(label: "com.app.REGISTER", qos: DispatchQoS.userInteractive, attributes: DispatchQueue.Attributes.concurrent)//2
         
          static let USER_DETAILS = DispatchQueue(label: "com.app.USER_DETAILS", qos: DispatchQoS.userInteractive, attributes: DispatchQueue.Attributes.concurrent)//3
         
         static let USER_LISTING = DispatchQueue(label: "com.app.USER_LISTING", qos: DispatchQoS.userInteractive, attributes: DispatchQueue.Attributes.concurrent)//4
+        static let UPLOAD_PICTURE = DispatchQueue(label: "com.app.UPLOAD_PICTURE", qos: DispatchQoS.background, attributes: DispatchQueue.Attributes.concurrent)//5
     }
 }

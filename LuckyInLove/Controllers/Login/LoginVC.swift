@@ -68,40 +68,40 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegat
         }
         else{
             let params: [String: Any] = ["email": username,"password": password,"device_token":password,"device":"ios"]
-            GCD.USER.LOGIN.async {
-                APIManager.sharedInstance.I_AM_COOL(params: params, api: API.USER.Login, Loader: true, isMultipart: false) { (responseData) in
-                    if responseData != nil{                             //if response is not empty
-                        do {
-                            let success = try JSONDecoder().decode(LoginModel.self, from: responseData!) // decode the response into SignUpModel
-                            switch success.error{
-                            case false:
-                                AppDelegate().sharedDelegate().navigateToDashboard()
-                            default:
-                                print("Error in log in the user")
-                            }
-                        }
-                        catch let err {
-                            print("Err", err)
-                        }
-                    }
-                    
-                    
-                }
-            }
+            User.loginUser(email: username, password: password) { (loginHandler) in
+                       if loginHandler == nil{
+                                       GCD.USER.LOGIN.async {
+                               APIManager.sharedInstance.I_AM_COOL(params: params, api: API.USER.Login, Loader: true, isMultipart: false) { (responseData) in
+                                   if responseData != nil{                             //if response is not empty
+                                       do {
+                                           let success = try JSONDecoder().decode(LoginModel.self, from: responseData!) // decode the response into SignUpModel
+                                           switch success.error{
+                                           case false:
+                                               AppDelegate().sharedDelegate().navigateToDashboard()
+                                           default:
+                                               print("Error in log in the user")
+                                           }
+                                       }
+                                       catch let err {
+                                           print("Err", err)
+                                       }
+                                   }
+                                   
+                                   
+                               }
+                           }
+                       }
+                       else{
+                           displayToast(loginHandler!)
+                       }
+                   }
+
             
         }
-//        User.loginUser(email: "Dummy@gmail.com", password: "12345678") { (loginHandler) in
-//            if loginHandler == nil{
-//                AppDelegate().sharedDelegate().navigateToDashboard()
-//            }
-//            else{
-//                self.view.sainiShowToast(message: loginHandler!)
-//            }
-//        }
-       
-        
-        
+
     }
+    
+    
     
     @IBAction func SignupButtonAction(_ sender: Any) {
         let vc: SignupVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "SignupVC") as! SignupVC

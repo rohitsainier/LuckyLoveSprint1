@@ -179,57 +179,64 @@ class User: NSObject {
     //MARK:- registerUser
     class func registerUser(withName:String,email:String,password:String,profilePic:UIImage,fcmToken: String,notificationCount: Int,messageCount: Int,location: Dictionary<String, Any>,loginHandler: Loginhandler?){
         DispatchQueue.main.async {
-             showLoader()
+            showLoader()
         }
-       
+        
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if error == nil{
-                
-                let storageRef = Storage.storage().reference().child("usersProfilePics").child("\((Date().timeIntervalSince1970)).jpg")
-                let imageData = compressImage(image: profilePic)
-                storageRef.putData(imageData, metadata: nil, completion: { (metadata, err) in
-                    if err == nil {
-                        storageRef.downloadURL(completion: { (url, error) in
-                            if error == nil{
-                                guard let path = url?.absoluteString else{
-                                    return
-                                }
-                                let values: [String: Any] = ["name": withName, "email": email, "profilePicLink": path,"location":location,"fcmToken":fcmToken,"notificationCount":notificationCount,"messageCount":messageCount]
-                                Database.database().reference().child("users").child((AppModel.shared.loggedInUser?.id)!).child("credentials").updateChildValues(values, withCompletionBlock: { (error, _) in
-                                    if error == nil {
-                                        DispatchQueue.main.async {
-                                             removeLoader()
+                user?.user.sendEmailVerification(completion: { (error) in
+                    if error == nil{
+                        let storageRef = Storage.storage().reference().child("usersProfilePics").child("\((Date().timeIntervalSince1970)).jpg")
+                        let imageData = compressImage(image: profilePic)
+                        storageRef.putData(imageData, metadata: nil, completion: { (metadata, err) in
+                            if err == nil {
+                                storageRef.downloadURL(completion: { (url, error) in
+                                    if error == nil{
+                                        guard let path = url?.absoluteString else{
+                                            return
                                         }
-//
-                                        let userInfo = ["email" : email, "password" : password]
-                                        UserDefaults.standard.set(AppModel.shared.loggedInUser?.id, forKey: "currentUser")
-                                        UserDefaults.standard.set(userInfo, forKey: "userInformation")
-                                        
-                                        loginHandler!(nil)
-                                        
-                                        
-                                    }
-                                    else{
+                                        let values: [String: Any] = ["name": withName, "email": email, "profilePicLink": path,"location":location,"fcmToken":fcmToken,"notificationCount":notificationCount,"messageCount":messageCount]
+                                        Database.database().reference().child("users").child((AppModel.shared.loggedInUser?.id)!).child("credentials").updateChildValues(values, withCompletionBlock: { (error, _) in
+                                            if error == nil {
+                                                DispatchQueue.main.async {
+                                                    removeLoader()
+                                                }
+                                                //
+                                                let userInfo = ["email" : email, "password" : password]
+                                                UserDefaults.standard.set(AppModel.shared.loggedInUser?.id, forKey: "currentUser")
+                                                UserDefaults.standard.set(userInfo, forKey: "userInformation")
+                                                
+                                                loginHandler!(nil)
+                                                
+                                                
+                                            }
+                                            else{
+                                                DispatchQueue.main.async {
+                                                    removeLoader()
+                                                }
+                                                
+                                                
+                                                self.handleErrors(err: error! as NSError, loginHandler: loginHandler!)
+                                            }
+                                        })
+                                    }else{
                                         DispatchQueue.main.async {
                                             removeLoader()
                                         }
                                         
-                                        
                                         self.handleErrors(err: error! as NSError, loginHandler: loginHandler!)
+                                        
                                     }
                                 })
-                            }else{
-                                DispatchQueue.main.async {
-                                    removeLoader()
-                                }
-                                
-                                self.handleErrors(err: error! as NSError, loginHandler: loginHandler!)
                                 
                             }
                         })
-                        
+                    }
+                    else{
+                        self.handleErrors(err: error! as NSError, loginHandler: loginHandler!)
                     }
                 })
+                
                 
             }
             else{
@@ -253,11 +260,21 @@ class User: NSObject {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             UserDefaults.standard.set(AppModel.shared.loggedInUser?.id, forKey: "currentUser")
             if error == nil {
-             print("Logged In")
-                DispatchQueue.main.async {
-                    removeLoader()
+                guard let status = Auth.auth().currentUser?.isEmailVerified else{
+                    return
                 }
-                loginHandler!(nil)
+                if status == true{
+                    print("Logged In")
+                    DispatchQueue.main.async {
+                        removeLoader()
+                    }
+                    loginHandler!(nil)
+                    
+                }else{
+                    removeLoader()
+                    loginHandler!("Email is not verified")
+                }
+             
                 
             } else {
                 DispatchQueue.main.async {
