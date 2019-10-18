@@ -26,9 +26,10 @@ class User: NSObject {
     var latitude: Any
     var longitude: Any
     var fcmToken: String
+    var gender: String
     
     //MARK: Inits
-    init(name: String, email: String, id: String, profilePic: String,latitude: Any,longitude: Any,fcmToken: String) {
+    init(name: String, email: String, id: String, profilePic: String,latitude: Any,longitude: Any,fcmToken: String,gender:String) {
         self.name = name
         self.email = email
         self.id = id
@@ -36,6 +37,7 @@ class User: NSObject {
         self.longitude = longitude
         self.latitude = latitude
         self.fcmToken = fcmToken
+        self.gender = gender
     }
     
     
@@ -177,11 +179,10 @@ class User: NSObject {
     }//HandleError func
     
     //MARK:- registerUser
-    class func registerUser(withName:String,email:String,password:String,profilePic:UIImage,fcmToken: String,notificationCount: Int,messageCount: Int,location: Dictionary<String, Any>,loginHandler: Loginhandler?){
+    class func registerUser(withName:String,email:String,gender: String,password:String,profilePic:UIImage,fcmToken: String,notificationCount: Int,messageCount: Int,location: Dictionary<String, Any>,loginHandler: Loginhandler?){
         DispatchQueue.main.async {
             showLoader()
         }
-        
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if error == nil{
                 user?.user.sendEmailVerification(completion: { (error) in
@@ -195,8 +196,8 @@ class User: NSObject {
                                         guard let path = url?.absoluteString else{
                                             return
                                         }
-                                        let values: [String: Any] = ["name": withName, "email": email, "profilePicLink": path,"location":location,"fcmToken":fcmToken,"notificationCount":notificationCount,"messageCount":messageCount]
-                                        Database.database().reference().child("users").child((AppModel.shared.loggedInUser?.id)!).child("credentials").updateChildValues(values, withCompletionBlock: { (error, _) in
+                                        let values: [String: Any] = ["name": withName, "email": email, "profilePicLink": path,"location":location,"fcmToken":fcmToken,"notificationCount":notificationCount,"messageCount":messageCount,"gender":gender]
+                                        Database.database().reference().child("users").child((AppModel.shared.loggedInUser?.username)!).child("credentials").updateChildValues(values, withCompletionBlock: { (error, _) in
                                             if error == nil {
                                                 DispatchQueue.main.async {
                                                     removeLoader()
@@ -303,7 +304,8 @@ class User: NSObject {
                 let longitude = location?["longitude"] as? String
                 let pic = data["profilePicLink"] as? String
                 let fcmToken = data["fcmToken"] as? String
-                let user = User.init(name: name ?? "", email: email ?? "", id: forUserID, profilePic: pic ?? "", latitude: latitude ?? "", longitude: longitude ?? "",fcmToken: fcmToken ?? "")
+                let gender = data["gender"] as? String
+                let user = User.init(name: name ?? "", email: email ?? "", id: forUserID, profilePic: pic ?? "", latitude: latitude ?? "", longitude: longitude ?? "",fcmToken: fcmToken ?? "",gender:gender ?? "")
                 
                 completion(user)
             }

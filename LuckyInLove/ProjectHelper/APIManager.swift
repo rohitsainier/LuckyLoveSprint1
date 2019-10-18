@@ -217,7 +217,7 @@ public class APIManager {
              headerParams  = getJsonHeaderWithToken()
             Params = params
         }
-        print(headerParams)
+        //print(headerParams)
         print(Params)
         print(api)
 

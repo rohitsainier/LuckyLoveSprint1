@@ -202,7 +202,7 @@ class CompleteSignUp: UIViewController {
         "device": "ios",
         "location_long": 34,
         "profession": "IOS Developer",
-        "age": age,
+        "dob": "10/12/1990",
         "min_age_pref": 18,
         "country": "India",
         "location_lat": 72]
@@ -213,6 +213,7 @@ class CompleteSignUp: UIViewController {
                         let success = try JSONDecoder().decode(RegisterModel.self, from: responseData!) // decode the response into SignUpModel
                         switch success.error{
                         case false:
+                            AppModel.shared.loggedInUser = success.body
                             self.uploadRegisterUserProfilePic(id: success.body?.id ?? "", AuthToken: success.body?.authToken ?? "", pic: self.profilePic)
                         default:
                             print("Error in register the user")
@@ -254,7 +255,7 @@ class CompleteSignUp: UIViewController {
     }
     
     private func registerFirebaseUser(){
-        User.registerUser(withName: firstname + lastname, email: email, password: password, profilePic: profilePic, fcmToken: "not configured yet", notificationCount: 0, messageCount: 0, location: ["lat":0,"long":0]) { (loginHandler) in
+        User.registerUser(withName: firstname + lastname, email: email, gender: gender, password: password, profilePic: profilePic, fcmToken: "not configured yet", notificationCount: 0, messageCount: 0, location: ["lat":0,"long":0]) { (loginHandler) in
             if loginHandler == nil{
                 displayToast("A verification link has been sent to your registered email id please verify to Login")
                 for controller in self.navigationController!.viewControllers as Array {

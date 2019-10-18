@@ -13,7 +13,7 @@ import UIKit
 class AppModel: NSObject {
     static let shared = AppModel()
     var token = ""
-    var loggedInUser: DummyUser!
+    var loggedInUser: LoginUserDetails!
     
 }
 

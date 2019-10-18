@@ -11,13 +11,13 @@ import Foundation
 struct RegisterModel: Codable {
     let error: Bool
     let message: String
-    let body: Body?
+    let body: LoginUserDetails?
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         error = try values.decodeIfPresent(Bool.self, forKey: .error) ?? false
         message  = try values.decodeIfPresent(String.self, forKey: .message) ?? ""
-        body = try values.decodeIfPresent(Body.self, forKey: .body) ?? nil
+        body = try values.decodeIfPresent(LoginUserDetails.self, forKey: .body) ?? nil
        
     }
 }
@@ -25,7 +25,8 @@ struct RegisterModel: Codable {
 // MARK: - Body
 struct Body: Codable {
     let id, fname, lname, username: String
-    let email, password, profileImage, age: String
+    let email, password, profileImage: String
+    let age: Int
     let about, gender, profession, country: String
     let genderPref, maxAgePref, minAgePref, maxDistPref: String
     let minDistPref, locationLat, locationLong, authToken: String
@@ -53,7 +54,7 @@ struct Body: Codable {
         email = try values.decodeIfPresent(String.self, forKey: .email) ?? ""
         password = try values.decodeIfPresent(String.self, forKey: .password) ?? ""
         profileImage = try values.decodeIfPresent(String.self, forKey: .profileImage) ?? ""
-        age = try values.decodeIfPresent(String.self, forKey: .age) ?? ""
+        age = try values.decodeIfPresent(Int.self, forKey: .age) ?? 0
         about = try values.decodeIfPresent(String.self, forKey: .about) ?? ""
         gender = try values.decodeIfPresent(String.self, forKey: .gender) ?? ""
         profession = try values.decodeIfPresent(String.self, forKey: .profession) ?? ""

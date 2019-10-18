@@ -77,6 +77,7 @@ class LoginVC: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegat
                                            let success = try JSONDecoder().decode(LoginModel.self, from: responseData!) // decode the response into SignUpModel
                                            switch success.error{
                                            case false:
+                                            AppModel.shared.loggedInUser = success.loginUserDetails
                                                AppDelegate().sharedDelegate().navigateToDashboard()
                                            default:
                                                print("Error in log in the user")

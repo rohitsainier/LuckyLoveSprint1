@@ -39,7 +39,8 @@ struct LoginUserDetails: Codable {
     let username: String
     let email, password: String
     let profileImage: String
-    let age, about: String
+    let about: String
+    let age: Int
     let gender, profession: String
     let country, locationLat, locationLong: String
     let genderPref, maxAgePref, minAgePref, maxDistPref: String
@@ -68,7 +69,7 @@ struct LoginUserDetails: Codable {
         email = try values.decodeIfPresent(String.self, forKey: .email) ?? ""
         password = try values.decodeIfPresent(String.self, forKey: .password) ?? ""
         profileImage = try values.decodeIfPresent(String.self, forKey: .profileImage) ?? ""
-        age = try values.decodeIfPresent(String.self, forKey: .age) ?? ""
+        age = try values.decodeIfPresent(Int.self, forKey: .age) ?? 0
         about = try values.decodeIfPresent(String.self, forKey: .about) ?? ""
         gender = try values.decodeIfPresent(String.self, forKey: .gender) ?? ""
         profession = try values.decodeIfPresent(String.self, forKey: .profession) ?? ""

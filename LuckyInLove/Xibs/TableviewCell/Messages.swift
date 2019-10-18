@@ -25,7 +25,7 @@ class Message {
     
     //MARK: Methods
     class func downloadAllMessages(forUserID: String, completion: @escaping (Message) -> Swift.Void) {
-        if let currentUserID = AppModel.shared.loggedInUser?.id {
+        if let currentUserID = AppModel.shared.loggedInUser?.username {
             Database.database().reference().child("users").child(currentUserID).child("conversations").child(forUserID).observe(.value, with: { (snapshot) in
                 if snapshot.exists() {
                     let data = snapshot.value as! [String: String]
@@ -62,7 +62,7 @@ class Message {
     
     
     class func markMessagesRead(forUserID: String)  {
-        if let currentUserID = AppModel.shared.loggedInUser?.id {
+        if let currentUserID = AppModel.shared.loggedInUser?.username {
             Database.database().reference().child("users").child(currentUserID).child("conversations").child(forUserID).observeSingleEvent(of: .value, with: { (snapshot) in
                 if snapshot.exists() {
                     let data = snapshot.value as! [String: String]
@@ -84,7 +84,7 @@ class Message {
     }
     
     func downloadLastMessage(forLocation: String, completion: @escaping () -> Swift.Void) {
-        if let currentUserID = AppModel.shared.loggedInUser?.id {
+        if let currentUserID = AppModel.shared.loggedInUser?.username {
             Database.database().reference().child("conversations").child(forLocation).observe(.value, with: { (snapshot) in
                 if snapshot.exists() {
                     for snap in snapshot.children {
@@ -121,7 +121,7 @@ class Message {
     
     
     class func send(message: Message, toID: String, completion: @escaping (Bool) -> Swift.Void)  {
-        if let currentUserID = AppModel.shared.loggedInUser?.id {
+        if let currentUserID = AppModel.shared.loggedInUser?.username {
             switch message.type {
             case .location:
                 let values = ["type": "location", "content": message.content, "fromID": currentUserID, "toID": toID, "timestamp": message.timestamp, "isRead": false]
@@ -181,7 +181,7 @@ class Message {
     }
     
     class func uploadMessage(withValues: [String: Any], toID: String, completion: @escaping (Bool) -> Swift.Void) {
-        if let currentUserID = AppModel.shared.loggedInUser?.id {
+        if let currentUserID = AppModel.shared.loggedInUser?.username {
             Database.database().reference().child("users").child(currentUserID).child("conversations").child(toID).observeSingleEvent(of: .value, with: { (snapshot) in
                 if snapshot.exists() {
                     let data = snapshot.value as! [String: String]

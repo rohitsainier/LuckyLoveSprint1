@@ -18,7 +18,7 @@ class Conversation {
     
     //MARK: Methods
     class func showConversations(completion: @escaping ([Conversation]) -> Swift.Void) {
-        if let currentUserID = AppModel.shared.loggedInUser?.id {
+        if let currentUserID = AppModel.shared.loggedInUser?.username {
             var conversations = [Conversation]()
            
             Database.database().reference().child("users").child(currentUserID).child("conversations").observe(.childAdded, with: { (snapshot) in
