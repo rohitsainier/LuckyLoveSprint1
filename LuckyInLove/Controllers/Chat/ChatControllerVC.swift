@@ -11,12 +11,13 @@ import GrowingTextView
 
 class ChatControllerVC: UIViewController,UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource {
 
+    @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var userNameLbl: UILabel!
     
     @IBOutlet weak var chatTextView: GrowingTextView!
     @IBOutlet weak var tableView: UITableView!
     var ReceiverID: String = ""
-    var username: String = ""
+    var userdetails:User!
     private var items = [Message]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,10 @@ class ChatControllerVC: UIViewController,UITextFieldDelegate,UITableViewDelegate
     }
     
     private func configUI(){
-        userNameLbl.text = username
+        userNameLbl.text = userdetails.name
+        profilePic.layer.cornerRadius = profilePic.frame.height / 2
+        profilePic.layer.masksToBounds = true
+        profilePic.downloadCachedImage(placeholder: "user_avatar", urlString: userdetails.profilePic)
         tableView.register(UINib(nibName: "ChatCell", bundle: nil), forCellReuseIdentifier: "ChatCell")
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = UITableView.automaticDimension

@@ -35,12 +35,12 @@ struct LoginModel: Codable {
 
 // MARK: - LoginUserDetails
 struct LoginUserDetails: Codable {
+    let userPic: UserPic?
     let id, fname, lname: String
     let username: String
     let email, password: String
     let profileImage: String
     let about: String
-    let age: Int
     let gender, profession: String
     let country, locationLat, locationLong: String
     let genderPref, maxAgePref, minAgePref, maxDistPref: String
@@ -48,9 +48,10 @@ struct LoginUserDetails: Codable {
     let authToken: String
 
     enum CodingKeys: String, CodingKey {
+        case userPic = "1"
         case id, fname, lname, username, email, password
         case profileImage = "profile_image"
-        case age, about, gender, profession, country
+        case about, gender, profession, country
         case locationLat = "location_lat"
         case locationLong = "location_long"
         case genderPref = "gender_pref"
@@ -69,7 +70,7 @@ struct LoginUserDetails: Codable {
         email = try values.decodeIfPresent(String.self, forKey: .email) ?? ""
         password = try values.decodeIfPresent(String.self, forKey: .password) ?? ""
         profileImage = try values.decodeIfPresent(String.self, forKey: .profileImage) ?? ""
-        age = try values.decodeIfPresent(Int.self, forKey: .age) ?? 0
+        //age = try values.decodeIfPresent(Int.self, forKey: .age) ?? 0
         about = try values.decodeIfPresent(String.self, forKey: .about) ?? ""
         gender = try values.decodeIfPresent(String.self, forKey: .gender) ?? ""
         profession = try values.decodeIfPresent(String.self, forKey: .profession) ?? ""
@@ -83,6 +84,7 @@ struct LoginUserDetails: Codable {
         locationLat = try values.decodeIfPresent(String.self, forKey: .locationLat) ?? ""
         locationLong = try values.decodeIfPresent(String.self, forKey: .locationLong) ?? ""
         authToken = try values.decodeIfPresent(String.self, forKey: .authToken) ?? ""
+        userPic = try values.decodeIfPresent(UserPic.self, forKey: .userPic) ?? nil
     }
 }
 
@@ -90,3 +92,25 @@ struct LoginUserDetails: Codable {
 struct UserGallary: Codable {
     let img1: String
 }
+
+// MARK: - The1
+struct UserPic: Codable {
+    let img2: String
+}
+
+// MARK: - UserListModel
+struct UserListModel: Codable {
+    let error: Bool
+    let message: String
+    let users: [LoginUserDetails]
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        error = try values.decodeIfPresent(Bool.self, forKey: .error) ?? false
+        message  = try values.decodeIfPresent(String.self, forKey: .message) ?? ""
+        users = try values.decodeIfPresent([LoginUserDetails].self, forKey: .users) ?? []
+    }
+    
+    
+}
+

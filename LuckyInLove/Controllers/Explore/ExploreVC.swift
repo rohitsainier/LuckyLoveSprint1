@@ -10,15 +10,15 @@ import UIKit
 import Koloda
 
 class ExploreVC: UIViewController {
-
+    
     @IBOutlet weak var kolodaView: KolodaView!
-    
     @IBOutlet weak var nopeImageView: UIImageView!
-       @IBOutlet weak var likeImageView: UIImageView!
-    
+    @IBOutlet weak var likeImageView: UIImageView!
     @IBOutlet weak var locationView: View_Addition!
-    
     @IBOutlet weak var filterView: View_Addition!
+    
+    
+    var userListArr: [LoginUserDetails] = [LoginUserDetails]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +36,7 @@ class ExploreVC: UIViewController {
         kolodaView.delegate = self
         likeImageView.alpha = 0
         nopeImageView.alpha = 0
+        getUserList()
     }
     /*
     // MARK: - Navigation
@@ -53,9 +54,37 @@ class ExploreVC: UIViewController {
     
     @IBAction func clickToRightSwipeBtn(_ sender: UIButton) {
         kolodaView.swipe(.right)
-        Message.send(message: Message(type: .text, content: "First Message just for testing nothing else", owner: MessageOwner.sender, timestamp: Date().timeIntervalSince1970, isRead: false), toID: "fsdfsteh1496") { (success) in
+        Message.send(message: Message(type: .text, content: "First Message just for testing nothing else", owner: MessageOwner.sender, timestamp: Date().timeIntervalSince1970, isRead: false), toID: "shhgsaj2136") { (success) in
             if success{
                 self.view.sainiShowToast(message: "Message sent successfully!")
+            }
+        }
+    }
+    
+    
+    //MARK:- 
+    private func getUserList(){
+        let params: [String: Any] = [String: Any]()
+        GCD.USER.USERS_LIST.async {
+            APIManager.sharedInstance.I_AM_COOL(params: params, api: API.USER.UsersList, Loader: true, isMultipart: false) { (responseData) in
+                if responseData != nil{                             //if response is not empty
+                    do {
+                        let success = try JSONDecoder().decode(UserListModel.self, from: responseData!) // decode the response into SignUpModel
+                        switch success.error{
+                        case false:
+                            self.userListArr = success.users
+                            DispatchQueue.main.async {
+                                self.kolodaView.reloadData()
+                            }
+                            
+                        default:
+                            print("Error in fetching user list")
+                        }
+                    }
+                    catch let err {
+                        print("Err", err)
+                    }
+                }
             }
         }
     }
@@ -127,7 +156,7 @@ extension ExploreVC: KolodaViewDataSource {
     
     
     func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
-       return 10
+        return userListArr.count
     }
 
     func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
@@ -162,7 +191,9 @@ extension ExploreVC: KolodaViewDataSource {
     func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
          let cardView = Bundle.main.loadNibNamed("SwipeCardView", owner: self, options: nil)![0] as! SwipeCardView
         cardView.profilePic.layer.cornerRadius = 20
-//        cardView.percentageMatchView.layer.cornerRadius = cardView.percentageMatchView.frame.height / 2
+        cardView.profilePic.downloadCachedImage(placeholder: "5", urlString: API.BASE_URL + (userListArr[index].userPic?.img2 ?? ""))
+        cardView.profileUsernameLbl.text = userListArr[index].fname +  userListArr[index].lname
+        cardView.profileUserBio.text = userListArr[index].email
        return cardView
     }
 

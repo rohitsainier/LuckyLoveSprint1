@@ -65,7 +65,8 @@ extension ChatListingVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc: ChatControllerVC = STORYBOARD.CHAT.instantiateViewController(withIdentifier: "ChatControllerVC") as! ChatControllerVC
         vc.ReceiverID = items[indexPath.row].user.id
-        vc.username = items[indexPath.row].user.name
+        vc.userdetails = items[indexPath.row].user
+        
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
